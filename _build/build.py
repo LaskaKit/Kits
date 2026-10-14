@@ -16,7 +16,7 @@ Kapitoly = podsložky s README.md (řazené podle názvu), titulek = první řá
 Potřebuje: pandoc, python3 + playwright (Chromium), poppler-utils (pdftotext, pdfunite, pdfinfo)
 a fonty Montserrat, Lato a JetBrains Mono (jsou v _build/fonts, nainstaluj je do systému).
 """
-import base64, html, json, os, re, subprocess, sys, zipfile
+  import base64, html, json, os, re, shutil, subprocess, sys, zipfile
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 B = os.path.join(REPO, '_build')
@@ -238,7 +238,7 @@ def build_pdf(root, cfg, chapters):
     final = os.path.join(out, f'{cfg["nazev"]} v{cfg["verze"]}.pdf')
     subprocess.run(['pdfunite', cover_pdf, body_pdf, final], check=True)
     print('  PDF:', final)
-
+      shutil.copy(final, os.path.join(out, os.path.basename(root) + '.pdf'))
 
 def build_zip(root, cfg, chapters):
     top = f'{cfg["zip_kody"]} v{cfg["verze"]}'
@@ -260,7 +260,7 @@ def build_zip(root, cfg, chapters):
         if os.path.exists(cti):
             zf.write(cti, f'{top}/CTI_ME.txt')
     print('  ZIP:', z)
-
+      shutil.copy(z, os.path.join(root, 'vystup', os.path.basename(root) + '-kody.zip'))
 
 if __name__ == '__main__':
     selected = sys.argv[1:] or kits()

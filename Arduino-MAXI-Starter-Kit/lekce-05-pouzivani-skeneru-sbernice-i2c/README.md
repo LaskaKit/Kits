@@ -102,8 +102,14 @@ void loop() {
 ```
 <!-- /kod -->
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 3:** Připoj desku k počítači
 
-Otevři sériový monitor (ikona lupy vpravo nahoře) a nastav rychlost 9600 baud. Uvidíš adresy všech nalezených zařízení na sběrnici I2C.
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
+
+**Krok 6:** Otevři sériový monitor (ikona lupy vpravo nahoře) a nastav rychlost 9600 baud. 
+
+Nyní uvidíš adresy všech nalezených zařízení na sběrnici I2C.
 
 <p align="center"><img src="img/obr-02.png" width="48%" alt=""></p>

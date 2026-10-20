@@ -2,7 +2,7 @@
 
 ## Úvod
 
-V této lekci uděláme jednoduchý, ale zajímavý experiment – pomocí LED vytvoříme tekoucí LED světla. Tato plynulá světla jsou tvořena osmi LED v řadě, která se postupně rozsvítí a tmavnou jeden po druhém, stejně jako tekoucí voda.
+V této lekci uděláme jednoduchý, ale zajímavý projekt – pomocí LED vytvoříme tekoucí LED světla. Tato plynulá světla jsou tvořena osmi LED v řadě, která se postupně rozsvítí a tmavnou jeden po druhém, stejně jako tekoucí voda.
 
 ## Komponenty
 
@@ -14,9 +14,9 @@ V této lekci uděláme jednoduchý, ale zajímavý experiment – pomocí LED v
 - USB kabel
 ## Princip
 
-Princip tohoto experimentu je jednoduchý – zapnout osm LED za sebou.
+Princip tohoto projektu je jednoduchý – zapnout osm LED za sebou.
 
-## Postup experimentu
+## Postup projektu
 
 **Krok 1:** Vytvoř obvod
 
@@ -80,8 +80,10 @@ void loop() {
 ```
 <!-- /kod -->
 
-**Krok 3:** Zkompiluj kód
+**Krok 3:** Připoj desku k počítači
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Nyní bys měl vidět osm LED světel, která se rozzáří jedno po druhém - zleva doprava, a potom ztlumeně postupně - zprava doleva. A zase opačně. Celý tento proces se bude opakovat, dokud bude obvod napájen.

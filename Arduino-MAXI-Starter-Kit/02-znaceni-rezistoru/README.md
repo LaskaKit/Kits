@@ -15,6 +15,6 @@ Pokud si hodnotou nejsi jistý, změř ji multimetrem.
 
 ## Poznámka ke schématům
 
-Ve schématech se typicky setkáte s jedním ze dvou značení rezistorů, a to Americkým (IEEE/ANSI) a Evropským (IEC). V tomto návodu se setkáte se značením Americkým.
+Ve schématech se typicky setkáte s jedním ze dvou značení rezistorů – Americkým (IEEE/ANSI) a Evropským (IEC). V tomto návodu se setkáte se značením Americkým.
 
 <p align="center"><img src="img/obr-2.png" width="30%" alt=""></p>

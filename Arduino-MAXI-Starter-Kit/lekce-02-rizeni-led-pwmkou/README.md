@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Pojďme zkusit v této lekci něco trochu jednoduššího – postupně budeme měnit jas LEDky pomocí kódů. Vzhledem k tomu, že pulzující světlo vypadá jako dýchání, dali jsme mu magické jméno – dýchající LEDka. Dosáhneme tohoto efektu pomocí pulzně šířkové modulace (PWM)
+Nyní si ukážeme, jak z arduina dostaneme signál jiný než "1" nebo "0". Postupně budeme měnit jas LEDky pomocí kódu. Vzhledem k tomu, že pulzující světlo vypadá jako dýchání, dali jsme mu magické jméno – dýchající LEDka. Dosáhneme tohoto efektu pomocí pulzně šířkové modulace (PWM)
 
 ## Komponenty
 
@@ -17,7 +17,7 @@ Pojďme zkusit v této lekci něco trochu jednoduššího – postupně budeme m
 
 ## Princip
 
-Pulzně šířková modulace neboli PWM (Pulse Width Modulation) je diskrétní modulace pro přenos analogového signálu pomocí dvouhodnotového signálu. Jako dvouhodnotová veličina může být použito např. napětí. Signál je přenášen pomocí střídy. Vzhledem ke svým vlastnostem je pulsně šířková modulace často využívána ve výkonové elektronice pro řízení velikosti napětí.
+Pulzně šířková modulace neboli PWM (Pulse Width Modulation) je diskrétní modulace pro přenos analogového signálu pomocí dvouhodnotového signálu. Jako dvouhodnotová veličina může být použito např. napětí. Vzhledem ke svojí jednoduchosti (vyžaduje jen minimální množství komponentů pro implementaci) a efektivitě (minimální ztráty) je pulsně šířková modulace často využívána ve výkonové elektronice (sporáky, motory, osvětlení,...).
 
 <p align="center"><img src="img/obr-02.png" width="61%" alt=""></p>
 
@@ -32,6 +32,7 @@ Tři základní parametry PWM:
 - Střída (duty cycle) je poměr mezi stavy zapnuto/vypnuto.
 - Perioda je součtem doby zapnuto a vypnuto.
 - Amplituda napětí je zde 0V-5V.
+
 ## Postup experimentu
 
 **Krok 1:** Vytvoř obvod
@@ -83,8 +84,12 @@ void loop() {
 ```
 <!-- /kod -->
 
-**Krok 3:** Zkompiluj kód
+**Krok 3:** Připoj desku k počítači
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Tady bys měl vidět, jak se LEDka stává jasnější a tmavší, a tak pořád dokola.

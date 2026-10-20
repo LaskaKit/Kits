@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Bzučák můžeš využít kdykoli, pokud budeš chtít použít nějaký zvuk.
+Bzučáky jsou velmi jednoduché výstupní prvky, které ti umožňují přidat do svého projektu zvukovou signalizaci. Často se s nimi setkáváš v běžném životě (například u mikrovlnky, tiskárny/kopírky, nebo dokonce u některých počítačových základových desek).
 
 ## Komponenty
 
@@ -11,15 +11,16 @@ Bzučák můžeš využít kdykoli, pokud budeš chtít použít nějaký zvuk.
 - USB kabel
 - Aktivní bzučak
 - Breadboard vodiče
+
 ## Princip
 
-Jedná se o elektrický bzučák s integrovanou strukturou, a proto jsou bzučáky, jež jsou napájeny stejnosměrným napětím, hojně využívány v počítačích, tiskárnách, kopírkách, alarmech, elektrických hračkách, automobilových elektronických zařízeních, telefonech, časovačích a jiných elektronických výrobcích s hlasovým zařízením. Bzučáky můžeme rozdělit na aktivní nebo pasivní (viz následující obrázek). Otoč kolíčky obou bzučáků lícem nahoru - ten se zelenou kulatou destičkou je pasivní, zatímco ten zalitý černým lepidlem (polymerem) je bzučák aktivní.
+Bzučáky můžeme rozdělit na aktivní nebo pasivní (viz následující obrázek). Otoč kolíčky obou bzučáků lícem nahoru - ten se zelenou kulatou destičkou je pasivní, zatímco ten zalitý černým lepidlem (polymerem) je bzučák aktivní.
 
 <p align="center"><img src="img/obr-01.png" width="49%" alt=""></p>
 
 Rozdíl mezi aktivním a pasivním bzučákem:
 
-Aktivní bzučák má v sobě zabudovaný oscilační zdroj, takže bude vydávat zvuky, pokud bude pod proudem. Pasivní bzučák ale takový zdroj nemá, proto při použití stejnosměrného napětí pípat nebude – místo toho je potřeba použít čtvercové vlny s frekvencí mezi 2K a 5K. Aktivní bzučák bývá často nákladnější a to právě z důvodu několika zabudovaných oscilátorů. V následujícím pokusu použijeme aktivní bzučák.
+Aktivní bzučák má v sobě zabudovaný oscilační zdroj, takže bude vydávat zvuky, pokud bude pod proudem. Pasivní bzučák ale takový zdroj nemá, proto při použití stejnosměrného napětí pípat nebude – místo toho je potřeba použít čtvercové vlny s frekvencí mezi 2K a 5K. Aktivní bzučák bývá často nákladnější a to právě z důvodu několika zabudovaných oscilátorů. V následujícím pokusu použijeme bzučák aktivní.
 
 ## Postup experimentu
 

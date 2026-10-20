@@ -1,6 +1,7 @@
 # Značení rezistorů
 
-Rezistory (odpory) ve stavebnici mají pět barevných proužků: tři pro číslice, čtvrtý je násobitel a pátý, trochu odsazený, udává toleranci (hnědá = 1 %). Ve stavebnici najdeš tyto hodnoty:
+## Hodnoty
+Rezistory (hovorově "odpory") ve stavebnici mají pět barevných proužků: tři pro číslice, čtvrtý je násobitel a pátý, trochu odsazený, udává toleranci (hnědá = 1 %). Ve stavebnici najdeš tyto hodnoty:
 
 | Hodnota | Proužky (od kraje) | Použití |
 |---|---|---|
@@ -11,3 +12,9 @@ Rezistory (odpory) ve stavebnici mají pět barevných proužků: tři pro čís
 <p align="center"><img src="img/obr-01.jpg" width="96%" alt=""></p>
 
 Pokud si hodnotou nejsi jistý, změř ji multimetrem.
+
+## Poznámka ke schématům
+
+Ve schématech se typicky setkáte s jedním ze dvou značení rezistorů, a to Americkým (IEEE/ANSI) a Evropským (IEC). V tomto návodu se setkáte se značením Americkým.
+
+<p align="center"><img src="img/obr-02.jpg" width="96%" alt=""></p>

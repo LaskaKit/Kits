@@ -2,7 +2,9 @@
 
 ## Úvod
 
-Jde o kulový spínač s kovovou kuličkou uvnitř. Používá se k detekci malého úhlu sklonu.
+Otřesová čidla jsou velmi principiálně velmi jednoduchá – Je-li spínač nakloněn v určitém úhlu, kulička uvnitř sjede dolů a dotkne se dvou kontaktů připojených k vnějším kolíčkům. Tím propojí kontakty. Pokud zůstane kulička mimo kontakty, rozpojí je.
+
+<p align="center"><img src="img/obr-01.jpg" width="55%" alt=""></p>
 
 ## Komponenty
 
@@ -10,13 +12,8 @@ Jde o kulový spínač s kovovou kuličkou uvnitř. Používá se k detekci mal�
 - USB kabel
 - Otřesové čidlo
 - Breadboard vodiče
-## Princip
 
-Princip je velice jednoduchý. Je-li spínač nakloněn v určitém úhlu, kulička uvnitř sjede dolů a dotkne se dvou kontaktů připojených k vnějším kolíčkům. Tím propojí kontakty. Pokud zůstane kulička mimo kontakty, rozpojí je.
-
-<p align="center"><img src="img/obr-01.jpg" width="55%" alt=""></p>
-
-## Postup experimentu
+## Postup projektu
 
 **Krok 1:** Vytvoř obvod
 
@@ -68,8 +65,10 @@ void loop() {
 ```
 <!-- /kod -->
 
-**Krok 3:** Zkompiluj kód
+**Krok 3:** Připoj desku k počítači
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Pohni čidlem a LED připojená k pinu 13 na Arduinu se rozsvítí. Čidlo je připojené na vstup s vnitřním pull-up odporem, takže žádný další odpor nepotřebuješ.

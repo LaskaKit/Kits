@@ -2,16 +2,17 @@
 
 ## Úvod
 
-V této lekci se naučíme, jak zapnout a vypnout LED pomocí počítače a sériového monitoru. Sériový monitor se používá ke komunikaci mezi Arduino deskou a počítačem nebo jinými přístroji. Jedná se o zabudovaný software v Arduino prostředí a otevře se kliknutím na tlačítko v pravém horním rohu. Můžeš posílat a získávat data pomocí sériového portu na Arduino desce a ovládat desku pomocí klávesnice. V této lekci používáme 3 LED, a proto můžeš do sériového monitoru napsat červenou, žlutou nebo modrou barvu na sériový monitor v IDE. Odpovídající LED na Arduino se tímto rozsvítí.
+Sériový monitor se používá ke komunikaci mezi Arduino deskou a počítačem nebo jinými přístroji, a v této lekci se naučíme, jak s jeho pomocí zapnout a vypnout LED.  Jedná se o zabudovaný software v Arduino prostředí a otevře se kliknutím na tlačítko v pravém horním rohu. Můžeš posílat a získávat data pomocí sériového portu na Arduino desce a ovládat desku pomocí klávesnice. V této lekci používáme 3 LED, a proto můžeš do sériového monitoru napsat červenou, žlutou nebo modrou barvu na sériový monitor v IDE. Odpovídající LED na Arduino se tímto rozsvítí.
 
 ## Komponenty
 
 - Arduino
 - Breadboard
 - 3x LED
-- 3x Odpor (220Ω)
+- 3x Rezistor (220Ω)
 - Breadboard vodiče
 - USB kabel
+
 ## Princip
 
 Zde slouží sériový monitor jako přestupní stanice pro komunikaci mezi tvým počítačem a Arduino. Nejprve převede počítač data do sériového monitoru a ta jsou poté přečtena pomocí Arduina. To pak provede další operace.
@@ -89,9 +90,11 @@ void loop() {
 ```
 <!-- /kod -->
 
-**Krok 3:** Zkompiluj kód
+**Krok 3:** Připoj desku k počítači
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Nyní klikni na tlačítko sériového monitoru (ikona lupy) v pravém horním rohu Arduino IDE. Ve spodní části okna se otevře sériový monitor. Rychlost nastav na 9600 baud.
 

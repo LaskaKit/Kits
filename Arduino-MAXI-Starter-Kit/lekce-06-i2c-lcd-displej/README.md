@@ -43,9 +43,9 @@ Na desce UNO R4 WiFi i UNO R3 můžeš místo A4/A5 použít také piny SDA a SC
 
 **Krok 2:** Napiš kód do Arduino IDE
 
-**Kód** – soubor `I²C_LCD_displej.ino`:
+**Kód** – soubor `I2C_LCD_displej.ino`:
 
-<!-- kod: I²C_LCD_displej/I²C_LCD_displej.ino -->
+<!-- kod: I2C_LCD_displej/I2C_LCD_displej.ino -->
 ```cpp
 /*
  * LaskaKit Arduino MAXI Starter kit – Lekce 6: I²C LCD displej

@@ -2,7 +2,7 @@
 
 ## Úvod
 
-V tomto experimentu se dozvíš, jak zapnout / vypnout LED pomocí I/O portu a tlačítka. "I/O port" odkazuje na výstupní a vstupní port. Zde je použit vstupní port Arduina k tomu, aby přečetl výstup z externího zařízení. Vzhledem k tomu, že samostatná deska je vybavena LED (připojenou na pinu 13), můžeš tuto LED použít pro pohodlnější provedení experimentu.
+V tomto experimentu se dozvíš, jak zapnout / vypnout LEDku (svítící diodu) pomocí I/O portu a tlačítka. "I/O port" odkazuje na výstupní a vstupní port. Zde je použit vstupní port Arduina k tomu, aby přečetl výstup z externího zařízení. Vzhledem k tomu, že samostatná deska je vybavena LEDkou (připojenou na pinu 13), použijeme ji pro pohodlnější provedení experimentu.
 
 <p align="center"><img src="img/obr-01.jpg" width="43%" alt=""></p>
 
@@ -19,11 +19,11 @@ V tomto experimentu se dozvíš, jak zapnout / vypnout LED pomocí I/O portu a t
 
 ## Princip
 
-Tlačítka jsou běžnou součástí a slouží k ovládání elektronických zařízení. Jsou obvykle používána jako přepínače pro připojení nebo odpojení obvodů. Tlačítka se vyrábí v různých tvarech a velikostech, avšak zde jsme použili 12 mm tlačítko, viz následující obrázky. Piny, na které ukazují šipky stejné barvy, jsou propojeny.
+S tlačítky už určite máš mnoho zkušeností. Jedná o nejčastější ovládací prvek v elektronice, a proto se také vyrábí v nevyčitatelném množství tvarů a velikostí. Zde jsme použili 12 mm tlačítko, viz následující obrázky. Piny, na které ukazují šipky stejné barvy, jsou propojeny.
 
 Při stisknutí tlačítka se piny, na které ukazují modré šipky, připojí na piny označené červenou šipkou.
 
-Obecně platí, že tlačítko je přímo napojeno na LED za účelem zapnutí a vypnutí LED. Toto spojení je relativně jednoduché. Někdy se ale LED rozsvítí automaticky, bez stisknutí tlačítka. To může být způsobeno různým typem rušení. Aby se zabránilo těmto vnějším zásahům, je použit pull-down rezistor pro připojení 1K–10KΩ odporu mezi tlačítkem, portem a GND. Toto se využívá k ničení vnějších zásahů, zatímco je připojeno GND tak dlouho, dokud je tlačítko vypnuté.
+Obecně platí, že tlačítko je přímo napojeno na LED za účelem zapnutí a vypnutí LED. Takové spojení je relativně jednoduché, ale někdy se v něm LED rozsvítí automaticky (bez stisknutí tlačítka). To může být způsobeno různýmy typy rušení. Aby se zabránilo těmto vnějším zásahům, je použit pull-down rezistor pro připojení 1K–10KΩ odporu mezi tlačítkem, portem a GND. Toto se využívá k ničení vnějších zásahů, zatímco je připojeno GND tak dlouho, dokud je tlačítko vypnuté.
 
 Toto připojení obvodu je široce používáno v řadě obvodů a elektronických zařízení. Například, pokud stiskneš jakékoli tlačítko na svém telefonu, rozsvítí se Ti podsvícení.
 
@@ -50,7 +50,7 @@ Toto připojení obvodu je široce používáno v řadě obvodů a elektronický
  *   Odpor 10 kΩ: mezi pin 12 a GND (drží vstup v klidu na LOW)
  *   LED: vestavěná LED „L“ na pinu 13 (nic nezapojuješ)
  *
- * Knihovny: žádné (jen Arduino IDE)
+ * Knihovny: žádné
  * Desky:    Arduino UNO R3, Arduino UNO R4 WiFi, Arduino Mega 2560
  *
  * Verze návodu 3.0 (10/2026)
@@ -76,8 +76,10 @@ void loop() {
 ```
 <!-- /kod -->
 
-**Krok 3:** Zkompiluj kód
+**Krok 3:** Připoj desku k počítači
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Nyní stiskni tlačítko a LED na Arduino se rozsvítí.

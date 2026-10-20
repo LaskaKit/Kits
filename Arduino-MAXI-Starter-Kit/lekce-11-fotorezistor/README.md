@@ -2,21 +2,22 @@
 
 ## Úvod
 
-Fotorezistor či photocell je světlem ovládaný proměnný odpor. Odpor fotorezistoru se snižuje s rostoucí intenzitou dopadajícího světla; jinými slovy, je fotovodivý. Fotorezistor můžeme využít pro na světlo citlivé detektory, jež se aktivují světlem či tmou.
+Fotorezistor (anglicky photorezistor/photocell) je světlem ovládaný proměnný rezistor. Odpor fotorezistoru se snižuje s rostoucí intenzitou dopadajícího světla; jinými slovy, je fotovodivý. Fotorezistor můžeme využít pro na světlo citlivé detektory, jež se aktivují světlem či tmou.
 
 ## Komponenty
 
 - Arduino
 - USB kabel
 - Fotorezistor
-- Odpor (10KΩ)
+- Rezistor (10KΩ)
 - 8x LED
-- 8x Odpor (220Ω)
+- 8x Rezistor (220Ω)
 - Breadboard vodiče
 - Breadboard
+  
 ## Princip
 
-Odpor ve fotorezistoru se mění na základě intenzity dopadajícího světla. Když se intenzita tohoto světla zvýší, odpor se sníží a naopak. V tomto experimentu použijeme 8 LED. Čím větší bude intenzita světla, tím více LED se rozsvítí. Až dosáhneme určité intenzity světla, rozsvítí se všechny LED. V případě žádného světla se nerozsvítí nic.
+Odpor ve fotorezistoru se mění na základě intenzity na něho dopadajícího světla. Když se intenzita tohoto světla zvýší, odpor se sníží a naopak. V tomto projektu použijeme 8 LED. Čím větší bude intenzita světla, tím více LED se rozsvítí. Až dosáhneme určité intenzity světla, rozsvítí se všechny LED. V případě žádného světla se nerozsvítí nic.
 
 ## Postup experimentu
 
@@ -77,9 +78,11 @@ void loop() {
 ```
 <!-- /kod -->
 
-**Krok 3:** Zkompiluj kód
+**Krok 3:** Připoj desku k počítači
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Posviť na fotorezistor a uvidíš několik LED, jak se rozsvítí. Posviť více a rozsvítí se LED o to víc. Jakmile fotorezistor postavíš do tmy, všechna LED zhasnou.
 

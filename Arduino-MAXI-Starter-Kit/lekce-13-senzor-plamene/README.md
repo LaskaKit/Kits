@@ -2,25 +2,25 @@
 
 ## Úvod
 
-Senzor plamene funguje tak, že zachytí infračervené světlo z plamene. Může být využit k detekci a varování před požárem.
+Tento senzor funguje na principu detekce infračerveného světla vlnové délky, která odpovídá běžným typům plamene. V tomto projektu si ukážeme, jak takový senzor použít.
 
 ## Komponenty
 
 - Arduino
 - USB kabel
 - Senzor plamene
-- 1x Odpor (10kΩ)
+- 1x Rezistor (10kΩ)
 - Breadboard vodiče
 
 <p align="center"><img src="img/obr-01.jpg" width="54%" alt=""></p>
 
 ## Princip
 
-Existuje několik typů senzoru plamene. V tomto experimentu budeme využívat infračervené čidlo plamene, které dokáže rozpoznat infračervené světlo o vlnové délce od 700nm do 1000nm. Infračervená sonda převede změny vnějšího infračerveného světla do současných změn. Poté převede analogovou kvantitu do digitální kvantity. Kratší kolík senzoru je katoda a ten druhý je anoda. Spoj katodu s 5V pinem a anodu s rezistorem; připoj druhý konec rezistoru ke GND, připoj jeden konec propojovacího vodiče na anodu, druhý konec k analogovému pinu, viz níže.
+Existuje několik typů senzoru plamene, ale v tomto projektu budeme využívat infračervené čidlo, které dokáže rozpoznat světlo o vlnové délce od 700nm do 1000nm (typická vlnová délka pro plameny obyčejných hořlavin). Infračervená zjistí intenzitu světla v okolí, a Arduino poté převede analogovou hodnotu do digitální podoby. 
 
-## Postup experimentu
+## Postup projektu
 
-**Krok 1:** Vytvoř obvod
+**Krok 1:** Vytvoř obvod. Kratší kolík senzoru je katoda a ten druhý je anoda. Spoj katodu s 5V pinem a anodu s rezistorem; připoj druhý konec rezistoru ke GND, připoj jeden konec propojovacího vodiče na anodu, druhý konec k analogovému pinu, viz níže.
 
 <p align="center"><img src="img/obr-02.png" width="27%" alt=""> <img src="img/obr-03.png" width="29%" alt=""></p>
 
@@ -74,8 +74,10 @@ void loop() {
 ```
 <!-- /kod -->
 
-**Krok 3:** Zkompiluj kód
+**Krok 3:** Připoj desku k počítači
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Když nyní rozsvítíš zapalovač nedaleko čidla, LED na pinu 13 na Arduino se rozsvítí.

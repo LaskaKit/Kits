@@ -11,7 +11,7 @@ V tomto experimentu se dozvíš, jak zapnout / vypnout LEDku (svítící diodu) 
 - Arduino
 - USB kabel
 - Tlačítko
-- Odpor (10kΩ)
+- Rezistor (10kΩ)
 - Breadboard vodiče
 - Breadboard
 
@@ -23,7 +23,7 @@ S tlačítky už určite máš mnoho zkušeností. Jedná o nejčastější ovl�
 
 Při stisknutí tlačítka se piny, na které ukazují modré šipky, připojí na piny označené červenou šipkou.
 
-Obecně platí, že tlačítko je přímo napojeno na LED za účelem zapnutí a vypnutí LED. Takové spojení je relativně jednoduché, ale někdy se v něm LED rozsvítí automaticky (bez stisknutí tlačítka). To může být způsobeno různýmy typy rušení. Aby se zabránilo těmto vnějším zásahům, je použit pull-down rezistor pro připojení 1K–10KΩ odporu mezi tlačítkem, portem a GND. Toto se využívá k ničení vnějších zásahů, zatímco je připojeno GND tak dlouho, dokud je tlačítko vypnuté.
+Obecně platí, že tlačítko je přímo napojeno na LED za účelem zapnutí a vypnutí LED. Takové spojení je relativně jednoduché, ale někdy se v něm LED rozsvítí automaticky (bez stisknutí tlačítka). To může být způsobeno různýmy typy rušení. Aby se zabránilo těmto vnějším zásahům, je použit pull-down rezistor pro připojení 1K–10KΩ Rezistoru mezi tlačítkem, portem a GND. Toto se využívá k ničení vnějších zásahů, zatímco je připojeno GND tak dlouho, dokud je tlačítko vypnuté.
 
 Toto připojení obvodu je široce používáno v řadě obvodů a elektronických zařízení. Například, pokud stiskneš jakékoli tlačítko na svém telefonu, rozsvítí se Ti podsvícení.
 
@@ -47,7 +47,7 @@ Toto připojení obvodu je široce používáno v řadě obvodů a elektronický
  *
  * Zapojení:
  *   Tlačítko: jeden vývod na 5V, druhý na pin 12
- *   Odpor 10 kΩ: mezi pin 12 a GND (drží vstup v klidu na LOW)
+ *   Rezistor 10 kΩ: mezi pin 12 a GND (drží vstup v klidu na LOW)
  *   LED: vestavěná LED „L“ na pinu 13 (nic nezapojuješ)
  *
  * Knihovny: žádné

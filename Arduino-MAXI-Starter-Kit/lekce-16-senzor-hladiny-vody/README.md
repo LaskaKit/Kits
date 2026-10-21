@@ -2,7 +2,7 @@
 
 ## Úvod
 
-V této lekci budeme používat snímač hladiny vody na měření hloubky vody. Výsledek zobrazíme na LCD displeji.
+V této lekci použijeme snímač hladiny vody na měření hloubky vody. Výsledek zobrazíme na LCD displeji.
 
 ## Komponenty
 
@@ -17,9 +17,9 @@ V této lekci budeme používat snímač hladiny vody na měření hloubky vody.
 
 ## Princip
 
-Senzor hladiny vody je modul, který může snímat hloubku vody, jejíž jádrová část je zesílený obvod, složený z tranzistoru a několika kabelů hřebenového tvaru DSP. Při umístění do vody budou tyto kabely měnit svůj odpor s hloubkou vody a převádět hloubkový signál na elektrický signál. S ADC převodníkem na Arduino konvertujeme tento analogový signál do digitálního a můžeme poznat změny hloubky vody.
+Voda (pokud není destilovaná) je elektricky vodivá. Vodivost vody můžeme využít (mimo jiné) pro měření hloubky vody v nějaké nádobě. Základem senzoru je zesílený obvod, složený z tranzistoru a několika vodivých plošek hřebenového tvaru. Při umístění do vody budou tyto vodivé plošky měnit svůj odpor s hloubkou vody a převádět hloubku na elektrický signál. S ADC převodníkem na Arduino konvertujeme tento analogový signál na digitální a pak z něho vypořítáme hloubku, kterou vypíšeme na LCD.
 
-## Postup experimentu
+## Postup projektu
 
 **Krok 1:** Vytvoř obvod
 
@@ -75,8 +75,11 @@ void loop() {
 
 > **Poznámka:** Potřebuješ knihovnu LiquidCrystal I2C – viz kapitola Instalace knihoven.
 
-**Krok 3:** Zkompiluj kód
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 3:** Připoj desku k počítači
+
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Nyní, když se ponoří čidlo do vody, můžeš vidět hloubku zobrazenou (v neurčitých hodnotách) na LCD displeji.

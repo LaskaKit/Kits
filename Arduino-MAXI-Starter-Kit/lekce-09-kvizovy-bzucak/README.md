@@ -10,7 +10,7 @@ Ve vědomostních soutěžích, především těch zábavních (např. soutěže
 - USB kabel
 - 4 Tlačítka
 - 4x LED
-- 4x Odpor (220Ω)
+- 4x Rezistor (220Ω)
 - Aktivní bzučak
 - Breadboard vodiče
 - Breadboard
@@ -42,7 +42,7 @@ Tlačítka 1, 2 a 3 slouží k odpovídání a tlačítkem 4 se resetuje. Pokud 
  *
  * Zapojení:
  *   Tlačítka 1, 2, 3, 4: piny 2, 3, 4, 9 – druhý vývod tlačítek na GND
- *   LED 1, 2, 3, 4: přes odpor 220 Ω na piny 6, 7, 8, 10, katody na GND
+ *   LED 1, 2, 3, 4: přes rezistor 220 Ω na piny 6, 7, 8, 10, katody na GND
  *   Aktivní bzučák: + na pin 5, – na GND
  *
  * Knihovny: žádné (jen Arduino IDE)

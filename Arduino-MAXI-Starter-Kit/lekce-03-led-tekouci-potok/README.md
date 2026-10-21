@@ -10,7 +10,7 @@ V této lekci uděláme jednoduchý, ale zajímavý projekt – pomocí LED vytv
 - Breadboard
 - Breadboard vodiče
 - 8x LED
-- 8x Odpor (220Ω)
+- 8x Rezistor (220Ω)
 - USB kabel
 ## Princip
 
@@ -35,7 +35,7 @@ Princip tohoto projektu je jednoduchý – zapnout osm LED za sebou.
  * jako by světlem tekla voda – tam a zpátky.
  *
  * Zapojení:
- *   8× LED přes odpor 220 Ω na piny 2, 3, 4, 5, 6, 7, 8, 9
+ *   8× LED přes rezistor 220 Ω na piny 2, 3, 4, 5, 6, 7, 8, 9
  *   Katody (kratší nožičky) všech LED na GND
  *
  * Knihovny: žádné (jen Arduino IDE)

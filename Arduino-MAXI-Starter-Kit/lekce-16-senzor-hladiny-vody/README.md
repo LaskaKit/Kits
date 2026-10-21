@@ -17,7 +17,9 @@ V této lekci použijeme snímač hladiny vody na měření hloubky vody. Výsle
 
 ## Princip
 
-Voda (pokud není destilovaná) je elektricky vodivá. Vodivost vody můžeme využít (mimo jiné) pro měření hloubky vody v nějaké nádobě. Základem senzoru je zesílený obvod, složený z tranzistoru a několika vodivých plošek hřebenového tvaru. Při umístění do vody budou tyto vodivé plošky měnit svůj odpor s hloubkou vody a převádět hloubku na elektrický signál. S ADC převodníkem na Arduino konvertujeme tento analogový signál na digitální a pak z něho vypořítáme hloubku, kterou vypíšeme na LCD.
+Voda (pokud není destilovaná) je elektricky vodivá. Vodivost vody můžeme využít (mimo jiné) pro měření hloubky vody v nějaké nádobě. Základem senzoru je zesílený obvod, složený z tranzistoru a několika vodivých plošek hřebenového tvaru. Při umístění do vody budou tyto vodivé plošky měnit svůj odpor s hloubkou vody a převádět hloubku na elektrický signál. 
+
+S ADC převodníkem na Arduino konvertujeme tento analogový signál na digitální a pak z něho vypořítáme hloubku, kterou vypíšeme na LCD.
 
 ## Postup projektu
 

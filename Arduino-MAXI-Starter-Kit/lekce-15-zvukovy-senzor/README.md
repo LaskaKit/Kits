@@ -2,9 +2,9 @@
 
 ## Úvod
 
-Modul mikrofonu má dva výstupy:
+Mikrofon v nějaké formě pravděpodobně máte připojen i k zařízení, na kterém tento manuál čtete. Tento modul mikrofonu ovšem funguje trochu jinak. Má dva výstupy:
 
-A0: Analogový výstup, který se používá pro výstup napěťových signálů z mikrofonu v reálném čase.
+A0: Analogový výstup, který se používá pro výstup napěťových signálů z mikrofonu v reálném čase. Analogický k funkci standardních mikrofonů.
 
 D0: Dosáhne-li intenzita zvuku určité prahové hodnoty (nastavené pomocí potenciometru), bude na výstupu snímače vysoké nebo nízké úrovně.
 
@@ -16,15 +16,18 @@ D0: Dosáhne-li intenzita zvuku určité prahové hodnoty (nastavené pomocí po
 - USB kabel
 - Zvukový senzor
 - Breadboard vodiče
+
 ## Princip
 
-Mikrofon umí konvertovat audio signál na elektrický signál (analogový), pak převést analogový signál na digitální hodnotu s pomocí ADC, přenést ji na kontrolér a zpracovat. Podívej se na následující obrázek, je na něm schematicky zobrazen modul mikrofonu.
+Mikrofon umí konvertovat audio signál na analogový elektrický signál, pak stačí signál převést na digitální hodnotu s pomocí ADC, a na Arduino ji zpracovat. Níže je vidět schéma mikrofonu:
 
 <p align="center"><img src="img/obr-02.jpg" width="33%" alt=""></p>
 
-LM393 je komparátor napětí. Pokud je napětí na pinu 3 vyšší, než je invertující pin 2, výstupní pin 1 bude log. 1. V opačném případě log. 0. Za prvé - nastav potenciometr, aby napětí na pinu 2 LM393 bylo méně než 5V. Pokud neslyšíš žádný zvuk, odpor mikrofonu je velmi velký. Napětí na pinu 3 LM393 je blízko k napájecímu napětí (5V). Na pinu DO je log.1 a LEDka svítí. Pokud slyšíš hluk, odpor mikrofonu klesne, pin DO modulu bude mít log.0 a LEDka se vypne.
+LM393 je komparátor napětí. Pokud je napětí na pinu 3 vyšší, než je invertující pin 2, výstupní pin 1 bude  mít log. hodnotu 1. V opačném případě log. hodnotu 0. 
 
-Postup experimentu
+Nejdříve nastav potenciometr, aby napětí na pinu 2 LM393 bylo méně než 5V. Pokud neslyšíš žádný zvuk, odpor mikrofonu je velmi velký. Napětí na pinu 3 LM393 je blízko k napájecímu napětí (5V). Na pinu DO je log.1 a LEDka svítí. Pokud slyšíš hluk, odpor mikrofonu klesne, pin DO modulu bude mít log.0 a LEDka se vypne.
+
+## Postup projektu
 
 **Krok 1:** Vytvoř obvod
 
@@ -95,8 +98,10 @@ void loop() {
 ```
 <!-- /kod -->
 
-**Krok 3:** Zkompiluj kód
+**Krok 3:** Připoj desku k počítači
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Když teď tleskneš nebo nahlas promluvíš do mikrofonu, LEDka připojená k pinu 13 na Arduinu se na 2 sekundy rozsvítí. V sériovém monitoru (9600 baud) vidíš, jak hlasitý zvuk byl. Citlivost změníš konstantou prah v programu.

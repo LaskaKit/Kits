@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Nyní si ukážeme, jak z arduina dostaneme signál jiný než "1" nebo "0". Postupně budeme měnit jas LEDky pomocí kódu. Vzhledem k tomu, že pulzující světlo vypadá jako dýchání, dali jsme mu magické jméno – dýchající LEDka. Dosáhneme tohoto efektu pomocí pulzně šířkové modulace (PWM)
+Nyní si ukážeme, jak z arduina dostaneme signál jiný než "1" nebo "0". Postupně budeme měnit jas LEDky pomocí kódu. Vzhledem k tomu, že pulzující světlo vypadá jako dýchání, dali jsme mu odpovídající jméno – dýchající LEDka. Dosáhneme tohoto efektu pomocí pulzně šířkové modulace (PWM)
 
 ## Komponenty
 
@@ -10,7 +10,7 @@ Nyní si ukážeme, jak z arduina dostaneme signál jiný než "1" nebo "0". Pos
 - Breadboard
 - Breadboard vodiče
 - 1x LED
-- Odpor (220Ω)
+- Rezistor (220Ω)
 - USB kabel
 
 <p align="center"><img src="img/obr-01.png" width="51%" alt=""></p>
@@ -52,7 +52,7 @@ Tři základní parametry PWM:
  * Jas se řídí pulzně šířkovou modulací (PWM) funkcí analogWrite().
  *
  * Zapojení:
- *   LED (anoda, delší nožička) přes odpor 220 Ω na pin 9
+ *   LED (anoda, delší nožička) přes rezistor 220 Ω na pin 9
  *   LED (katoda, kratší nožička) na GND
  *
  * Knihovny: žádné (jen Arduino IDE)

@@ -2,7 +2,7 @@
 
 ## Úvod
 
-V této lekci vytvoříme voltmetr s pomocí LCD displeje 1602 a potenciometru.
+V této lekci vytvoříme voltmetr s pomocí LCD displeje 1602 a potenciometru, čímž si mimo jiné ukážeme, jak vyčíst průběžně se měnící data na LCD displej. 
 
 ## Komponenty
 
@@ -15,11 +15,11 @@ V této lekci vytvoříme voltmetr s pomocí LCD displeje 1602 a potenciometru.
 
 ## Princip
 
-V tomto experimentu využijeme potenciometr k dělení napětí. Vzhledem k tomu, že Arduino umí číst pouze digitální signály, ale na výstupech posuvných pinů potenciometru je analogový signál, musíme převést tento analogový signál do digitálního s analogově-digitálním konvertorem (ADC). Naštěstí je Arduino samo o sobě dodáváno s 10bitovým ADC, které můžeme použít k provedení této konverze.
+V tomto experimentu využijeme potenciometr k dělení napětí. Na výstupu pinů potenciometru je sice analogový signál, který by Arduino normálně nepřečetlo. To ale naštěstí není problém díky 10-bitovému ADC (analogově-digitálnímu konvertoru), který Arduino už ze základu obsahuje. Ten totiž převede souvislý (analogový) signál na celočíselnou hodnotu (0-1023), se kterou již arduino pracovat umí.
 
-Poté se zobrazí toto napětí na LCD displeji.
+Po přepočtu se naměřené napětí zobrazí na LCD displeji.
 
-## Postup experimentu
+## Postup projektu
 
 **Krok 1:** Vytvoř obvod
 
@@ -79,8 +79,10 @@ void loop() {
 
 > **Poznámka:** Potřebuješ knihovnu LiquidCrystal I2C – viz kapitola Instalace knihoven.
 
-**Krok 3:** Zkompiluj kód
+**Krok 3:** Připoj desku k počítači
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Nyní otoč potenciometr a uvidíš na LCD displeji napětí pinů A0 na Arduino. Toto napětí bude odpovídat změně provedené potenciometrem.

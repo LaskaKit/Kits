@@ -9,7 +9,7 @@ V minulé lekci ses už naučil, jak se dělají tekoucí LED světla. V této l
 - Arduino
 - Breadboard
 - 8x LED
-- 8x Odpor (220Ω)
+- 8x Rezistor (220Ω)
 - Potenciometr
 - USB kabel
 - Breadboard vodiče
@@ -36,7 +36,7 @@ Princip je poměrně jednoduchý. Zapne se 8 LEDek podle pořadí. A pak se změ
  * Potenciometrem měníš rychlost běhu.
  *
  * Zapojení:
- *   8× LED přes odpor 220 Ω na piny 2 až 9, katody na GND
+ *   8× LED přes rezistor 220 Ω na piny 2 až 9, katody na GND
  *   Potenciometr: krajní vývody na 5V a GND, prostřední vývod na A0
  *
  * Knihovny: žádné (jen Arduino IDE)

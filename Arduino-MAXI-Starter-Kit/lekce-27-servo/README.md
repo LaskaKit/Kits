@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Servomotor (Servo) je typ motoru s převodovkou, který se může otáčet jen o 180 stupňů (některý víc) a je řízen impulsy z Arduino. Tyto impulsy „řeknou“ servu, do jaké pozice se má otočit.
+Servomotor (Servo) je typ motoru, který ví v jaké pozici se nachází a tak se dokáže otočit o specifický úhel. Levná serva se často ovládají za pomocí PWM modulace, která řekne servu jaké pozice se má otočit.
 
 Servo má tři vodiče. Hnědý vodič je GND, červený vodič je VCC a oranžový vodič je signál.
 
@@ -17,7 +17,7 @@ Servo má tři vodiče. Hnědý vodič je GND, červený vodič je VCC a oranžo
 
 ## Princip
 
-Servo se skládá z pláště, obvodové desky, non-jádra motoru, převodovky a detekce polohy. Jeho pracovní princip je následující: Arduino vysílá signál PWM do serva. Tam je tento signál zpracováván IO pro výpočet směru otáčení k řízení motoru, a pak je tato hnací síla přenášena na otočné rameno pomocí ozubeného převodu. Ve stejné době vrací detektor signál pozici, jestli je dosaženo nastavení polohy nebo ne.
+Servo se skládá z pláště, obvodové desky, non-jádra motoru, převodovky a detekce polohy (často ve formě potenciometru). Jeho pracovní princip je následující: Arduino vysílá signál PWM do serva. Tam je tento signál přepočítán na směr otáčení a finální úhel, a pak je tato hnací síla přenášena na otočné rameno pomocí ozubeného převodu. 
 
 ## Postup experimentu
 
@@ -68,8 +68,10 @@ void loop() {
 ```
 <!-- /kod -->
 
-**Krok 3:** Zkompiluj kód
+**Krok 3:** Připoj desku k počítači
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Nyní uvidíš, jak se servo plynule otáčí z 0° do 180° a zpět.

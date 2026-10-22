@@ -2,13 +2,13 @@
 
 ## Úvod
 
-Sedmisegmentovka obsahuje sedm políček (segmentů), které je možné individuálně rozsvěcet a zhasínat. Jednotlivé segmenty mohou být zapnuty nebo vypnuty. Kombinací vypnutých a zapnutých segmentů můžeme docílit zobrazení arabských číslic, hexadecimálních číslic, případně i dalších písmen a znaků.
+Displeje tohoto typu obsahují sedm políček (segmentů), které je možné individuálně rozsvěcet a zhasínat. Kombinací vypnutých a zapnutých segmentů můžeme docílit zobrazení arabských číslic, hexadecimálních číslic, a dalších písmen nebo znaků.
 
 ## Komponenty
 
 - Arduino
 - Sedmisegmentový displej
-- 8x Odpor (220Ω)
+- 8x Rezistor (220Ω)
 - USB kabel
 - Breadboard vodiče
 - Breadboard
@@ -17,27 +17,23 @@ Sedmisegmentovka obsahuje sedm políček (segmentů), které je možné individu
 
 ## Princip
 
-Sedmisegmentový displej je nejpoužívanější případ segmentového displeje. Je vhodný pouze pro zobrazování číslic, maximálně hexadecimálních číslic A až F. Pro číslicový indikátor je minimální počet segmentů právě sedm. Jako ostatní segmentové displeje existují různé technologie zobrazení segmentů – LED, LCD, žárovková vlákna, dokonce i mechanické ovládání u největších displejů. Nejlevnější a nejpoužívanější z nich jsou sedmisegmentovky tvořené světelnými diodami. Ty se též vyrábějí sériově pro průmyslové použití, jsou ale i dostupné pro nadšence do elektroniky a dají se za sebou modulárně skládat do libovolně dlouhého displeje. Takový modul se familiérně nazývá sedmisegmentovka.
+Sedmisegmentový displej (hovorově _sedmisegmentovka_) je jednou z nejběžnějších zobrazovacích jednotek na světě. Setkáš se s ním všude, od moderních průmyslových CNC strojů až po mikrovlnky staré desítky let. 
 
-Diodové sedmisegmentovky mají relativně rychlou odezvu, přibližně 10 nanosekund, a spotřebu 0,5 až 1 mA proudu na jeden segment u těch nejmenších (tzn. celá sedmisegmentovka 3,5–7 mA). Napětí anody je závislé na barvě – 1,5 až 2,5 V. Aby se ovládání diod zjednodušilo, mají diody navzájem propojené anody či katody.
+Je vhodný pouze pro zobrazování číslic, maximálně hexadecimálních číslic A až F, což je ale pro široké množství využití adekvátní. Segmety mohou být zvýrazněny hned několika způsoby – LED, LCD, žárovková vlákna, dokonce i mechanicky. Nejlevnější a nejpoužívanější z nich jsou ty tvořené světelnými diodami (LED). Další výhodou těchto displejů je, že se za sebou dají modulárně skládat do teoreticky někonečně dlouhého displeje.
 
-Společná katoda (CC) a společná anoda (CA).
+Diodové sedmisegmentovky mají spotřebu cca 0,5 až 1 mA proudu na jeden segment u těch nejmenších (tzn. celá sedmisegmentovka 3,5–7 mA). Napětí je závislé na barvě – 1,5 až 2,5 V. Aby se ovládání diod zjednodušilo, mají diody navzájem propojenou jednu sadu vývodů (anody nebo katody) - z toho plynou označení společná katoda (Common Cathode) a společná anoda (Common Anode).
 
-Rozdíl mezi těmito dvěma displeji, jak jejich název napovídá, spočívá v tom, že společná katoda má všechny katody 7-segmentů spojených dohromady a společná anoda má všechny anody 7-segmentů spojených dohromady.
+## Zapojení
 
-Sedmisegmentový displej se společnou katodou
+**Společná katoda (Common Cathode, CC)** – V displeji se společnou katodou jsou všechny katody LED segmentů spojeny dohromady na log. 0. Jednotlivé segmenty (a-g) jsou osvětleny tak, že anoda segmentu je zapojena na log. 1 přes omezovací odpor.
 
-Společná katoda (Common Cathode, CC) – V displeji se společnou katodou jsou všechny katody LED segmentů spojeny dohromady na log. 0. Jednotlivé segmenty (a-g) jsou osvětleny tak, že anoda segmentu je zapojena na log. 1 přes omezovací odpor.
+**Společná anoda (Common Anode, CA)** – V displeji se společnou anodou jsou všechny anody LED segmentů spojeny dohromady na log. 1. Jednotlivé segmenty (a-g) jsou osvětleny tak, že katoda segmentu je zapojena na log. 0 přes omezovací odpor.
 
 <p align="center"><img src="img/obr-02.jpg" width="37%" alt=""> <img src="img/obr-03.jpg" width="37%" alt=""></p>
 
-Sedmisegmentový displej se společnou anodou
+Teď je potřeba zjistit, jaký displej máš, CC nebo CA. Nejjednodušší způsob je pomocí 3V baterie (např. CR2032). Jeden z pinů na displeji je společná katoda nebo anoda. Dotkni se krátce „+“ baterie společného pinu a „−“ pinu vedle. Svítí segment? Máš displej se společnou anodou. Nesvítí? Otoč baterii a dotkni se „−“ společného pinu a „+“ pinu vedle. Svítí? Máš displej se společnou katodou. Segmentem nesviť dlouho, i vteřina trvalého svícení diodu spálí – 3 V z baterie je pro červenou LED (1,9–2 V) příliš.
 
-Společná anoda (Common Anode, CA) – V displeji se společnou anodou jsou všechny anody LED segmentů spojeny dohromady na log. 1. Jednotlivé segmenty (a-g) jsou osvětleny tak, že katoda segmentu je zapojena na log. 0 přes omezovací odpor.
-
-Teď je potřeba zjistit, jaký displej máš, CC nebo CA. Nejjednodušší způsob je pomocí 3V baterie CR2032. Prostřední pin na displeji je společná katoda nebo anoda. Dotkni se krátce „+“ baterie společného pinu a „−“ pinu vedle. Svítí segment? Máš displej se společnou anodou. Nesvítí? Otoč baterii a dotkni se „−“ společného pinu a „+“ pinu vedle. Svítí? Máš displej se společnou katodou. Segmentem nesviť dlouho, i vteřina trvalého svícení diodu spálí – 3 V z baterie je pro červenou LED (1,9–2 V) příliš.
-
-## Postup experimentu
+## Postup projektu
 
 **Krok 1:** Vytvoř obvod
 
@@ -123,8 +119,10 @@ void nastavSegment(int pin, bool sviti) {
 ```
 <!-- /kod -->
 
-**Krok 3:** Zkompiluj kód
+**Krok 3:** Připoj desku k počítači
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Nyní se na displeji postupně zobrazují číslice 0 až 9. Pokud svítí obráceně (všechny segmenty kromě těch správných), máš displej se společnou anodou – v programu nastav SPOLECNA\_ANODA na true a společný pin zapoj na 5V.

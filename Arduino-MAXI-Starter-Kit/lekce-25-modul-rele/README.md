@@ -2,11 +2,9 @@
 
 ## Úvod
 
-Elektromagnetické relé je elektrotechnická součástka, která obsahuje elektromagneticky ovládané kontakty. Relé bylo vynalezeno roku 1835 Josefem Henrym a původně bylo využíváno jako mechanický zesilovač na telegrafních linkách. Jeho název pochází z přepřahacích stanic na kurýrních cestách.
+Elektromagnetické relé je součástka, která obsahuje kontakty které lze spínat jednoduchým signálem. Relé bylo vynalezeno roku 1835 Josefem Henrym a původně bylo využíváno jako mechanický zesilovač na telegrafních linkách. Jeho název pochází z přepřahacích stanic na kurýrních cestách.
 
-Relé se používá v mnoha aplikacích, byť jeho funkci v mnoha případech přebírají obvody založené na polovodičích. Na rozdíl od polovodičů, relé obvykle zajišťuje galvanické - izolační oddělení řídícího a řízeného obvodu.
-
-Elektromagnetické relé je příkladem využití elektromagnetu v zařízení, které je důležitým funkčním prvkem v automatizovaných soustavách a řídících systémech.
+Relé se dodnes používá v širokém spektru elektronických obvodů, i když jeho funkci v mnoha případech přebírají obvody založené na polovodičích. Relé má totiž i své výhody. Na rozdíl od polovodičů, relé obvykle zajišťuje galvanické oddělení řídícího a řízeného obvodu, což znamená, že 5V arduino nijak nemůže přijít do styku s 230V které relé často ovládá.
 
 ## Komponenty
 
@@ -19,13 +17,13 @@ Elektromagnetické relé je příkladem využití elektromagnetu v zařízení, 
 
 ## Princip
 
-Relé se v základním provedení skládá z cívky (elektromagnetu) navinuté na jádru z měkkého feromagnetického materiálu. Magnetický obvod je uzavřen pohyblivou kotvou. Kotva je pružinou uváděna do klidové polohy a současně se opírá o pohyblivý kontakt. Po připojení cívky na elektrický zdroj vyvolá proud cívkou v magnetickém obvodu magnetický tok. Magnetický tok vyvolá přitažlivou sílu na kotvu, která přemůže sílu v pružině a překlopí kontakt. Po odpojení el. proudu se kotva a kontakt vrátí do předchozího, klidového stavu.
+Relé se v základním provedení skládá z cívky (elektromagnetu) navinuté na jádru z měkkého feromagnetického materiálu (materil který se zmagnetizuje jiným magnetickým materiálem, tj. "magnetický jako železo"). Magnetický obvod je uzavřen pohyblivou kotvou. Kotva je pružinou uváděna do klidové polohy a současně se opírá o pohyblivý kontakt. Po připojení cívky na elektrický zdroj vyvolá proud cívkou v magnetickém obvodu magnetický tok. Magnetický tok vyvolá přitažlivou sílu na kotvu, která přemůže sílu v pružině a překlopí kontakt. Po odpojení el. proudu se kotva a kontakt vrátí do předchozího, klidového stavu.
 
 <p align="center"><img src="img/obr-02.jpg" width="37%" alt=""></p>
 
 Většina modulů relé sepne, když na vstup S pošleme z Arduina log. 1 (5 V). Tranzistor na modulu se otevře, cívka relé přitáhne kotvu, spínací kontakt (NO) se uzavře a rozpínací (NC) se rozpojí. Když pošleme log. 0, relé se vrátí do původního stavu. Některé moduly spínají obráceně, při log. 0 – pak v programu změň RELE\_ZAPNUTO na LOW.
 
-## Postup experimentu
+## Postup projektu
 
 **Krok 1:** Vytvoř obvod
 
@@ -73,8 +71,10 @@ void loop() {
 ```
 <!-- /kod -->
 
-**Krok 3:** Zkompiluj kód
+**Krok 3:** Připoj desku k počítači
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Teď uslyšíš známé „tik-tak, tik-tak“. To znamená, že normálně uzavřený kontakt se otevře a naopak, normálně otevřený kontakt se uzavře.

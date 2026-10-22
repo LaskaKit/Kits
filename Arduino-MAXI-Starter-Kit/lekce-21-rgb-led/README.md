@@ -2,7 +2,7 @@
 
 ## Úvod
 
-RGB LED mohou vyzařovat různé barvy světla. Tři LED: červená, zelená a modrá jsou zabaleny do průhledného nebo poloprůhledného plastového pláště se čtyřmi kolíky. Ze třech základních barev: červená, zelená a modrá lze míchat a vytvářet všechny druhy barev podle jasu, takže si můžeš udělat RGB LED vyzařující barevné světlo.
+RGB LED jsou svítivé diody, které obsahují 3 základní barvy na jednom komponentu. Tyto barvy jsou červená, zelená a modrá, a typicky jsou jsou zabaleny do průhledného nebo poloprůhledného plastového pláště se čtyřmi kolíky. Pokud si pamatuješ výuku z prvního stupně, tak určitě víš, že z červené, zelené a modré lze míchat a vytvářet všechny druhy barev pomocí aditivního míchání, takže si můžeš udělat RGB LED vyzařující barevné světlo. Stejný způsob míchání barev využívají více méně všechny plnobarevné monitory, televize, a obrazovky na světě.
 
 ## Komponenty
 
@@ -15,11 +15,11 @@ RGB LED mohou vyzařovat různé barvy světla. Tři LED: červená, zelená a m
 
 ## Princip
 
-V tomto experimentu budeme používat technologii PWM pro ovládání jasu RGB LED. Už jsme to popsali v lekci 2 tohoto kitu. Pokud je to pro Tebe nezbytné, zkontroluj si to.
+V tomto experimentu budeme používat technologii PWM pro ovládání jasu RGB LED. Už jsme to popsali v lekci 2 tohoto kitu. Pokud si potřebuješ osvěžit paměť, tak si ji klidně projdi ještě jednou.
 
-Každá ze tří barevných kanálů: červená, zelená a modrá, má 255 stupňů jasu. Pokud ze tří základních barev jsou všechny 0, LED zhasne. Pokud jsou všechny 255, LED bude nejjasnější. Pokud do všech kolíků pustíme hodnoty mezi 0 a 255, RGB LED bude zobrazovat různé barvy.
+Každý ze tří kanálů má 255 stupňů jasu. Pokud ze tří základních barev jsou všechny 0, LED zhasne. Pokud jsou všechny 255, LED bude svítit nejjasnější možnou bílou. Různé barvy se pak namícháme tak, že do kolíků pustíme hodnoty mezi 0 a 255.
 
-RGB LED lze rozdělit na následující typy: společná anoda a společná katoda. V tomto experimentu budeme používat společnou katodu RGB LED.
+RGB LED lze rozdělit na následující typy: společná anoda a společná katoda. V tomto experimentu budeme používat RGB LED se společnou katodou.
 
 ## Postup experimentu
 
@@ -95,8 +95,10 @@ void barva(int r, int g, int b) {
 ```
 <!-- /kod -->
 
-**Krok 3:** Zkompiluj kód
+**Krok 3:** Připoj desku k počítači
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Nyní můžeš vidět, že RGB LED bliká červeně, zeleně, modře, oranžově, žlutě, fialově, indigo atd.

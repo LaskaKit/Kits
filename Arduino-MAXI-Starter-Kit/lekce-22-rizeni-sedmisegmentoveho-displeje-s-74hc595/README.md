@@ -2,12 +2,12 @@
 
 ## Úvod
 
-V minulé lekci jsme si ukázali, jak řídit sedmisegmentové displeje s pomocí Arduino, bez speciálních obvodů. Další možností, jak řídit několik sedmisegmentových displejů pomocí Arduino, je použití posuvných registrů, které pracují pomocí sériového přenosu dat. Pro řízení použijeme osmibitové posuvné registry 74HCT595.
+V lekci 18 jsme si ukázali, jak řídit sedmisegmentové displeje s pomocí Arduino bez speciálních obvodů, ovšem to není jediná možnost, jak řídit několik sedmisegmentových displejů pomocí Arduino. Další způsob je použití posuvných registrů. Zde použijeme osmibitový posuvný registr 74HCT595.
 
 ## Komponenty
 
 - Arduino
-- 8x Odpor (220Ω)
+- 8x Rezistor (220Ω)
 - Posuvný registr 74HC595
 - Breadboard vodiče
 - Breadboard
@@ -16,11 +16,15 @@ V minulé lekci jsme si ukázali, jak řídit sedmisegmentové displeje s pomoc�
 
 ## Princip
 
-Co vůbec posuvný registr dělá? V zásadě je to soustava klopných obvodů, kterými se logická informace posouvá dále pomocí hodinového impulsu. K vysvětlení má posuvný registr celkem pro nás potřebné 3 vstupy (SER, SRCLK, SCLK) a celkem v našem případě 8 výstupů (Q0 – Q7). K ovládání 8 výstupů jsou zapotřebí pouze 3 piny na Arduino. Zapojíme tedy 74HC595 k Arduino a sedmisegmentovku k 74HC595.
+Co vůbec posuvný registr dělá? V zásadě je to soustava klopných obvodů (obvod který v sobě drží stav logické 1, 0 a dokonce v tomto případě stav vysoké impedance (HZ)), kterými se logická informace posouvá dále pomocí hodinového impulsu. K vysvětlení má posuvný registr celkem pro nás potřebné 3 vstupy (SER, SRCLK, SCLK) a celkem v našem případě 8 výstupů (Q0 – Q7).  74HC595 se skládá ze tří částí: posuvný registr, záchytný registr a třístavové výstupy. 
+
+K ovládání 8 výstupů jsou zapotřebí pouze 3 piny na Arduino. 74HC595 je široce používán k řízení např. segmentových displejů. Můžeme nastavit buď výstupní piny log.1, log.0 nebo stav vysoké impedance. Navíc jich lze propojit několik mezi sebou (takzvaně "daisy-chain").
+
+## Zapojení
+
+Propojení 74HC595, Arduino a sedmisegmentovky může vypadat takto:
 
 <p align="center"><img src="img/obr-01.png" width="25%" alt=""></p>
-
-74HC595 se skládá ze tří částí: posuvný registr, záchytný registr a třístavové výstupy. Převádí sériový vstup do paralelního výstupu, takže můžeš ušetřit IO porty Arduino. 74HC595 je široce používán k řízení např. segmentových displejů. Můžeme nastavit buď výstupní piny log.1, log.0 nebo stav vysoké impedance. Je možné zapojovat do kaskády několik 74HC595.
 
 Piny 74HC595 a jejich funkce:
 
@@ -106,8 +110,10 @@ void loop() {
 ```
 <!-- /kod -->
 
-**Krok 3:** Zkompiluj kód
+**Krok 3:** Připoj desku k počítači
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Nyní se na displeji postupně zobrazí znaky 0 až F.

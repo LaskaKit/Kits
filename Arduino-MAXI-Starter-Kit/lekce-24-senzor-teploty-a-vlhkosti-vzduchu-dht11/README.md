@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Digitální čidlo teploty a vlhkosti DHT11 je kompozitní senzor, který obsahuje kalibrovaný digitální výstup. Snímač obsahuje rezistivní čidlo vlhkosti a NTC teplotní senzor, a je spojen s vysoce výkonným 8-bitovým převodnikem.
+DHT11 je jenzor, který obsahuje rezistivní čidlo vlhkosti, NTC teplotní senzor, a 8-bitovým převodník. Právě díky převodníku jsme schopni ze senzoru dostat hotová digitální data místo surového analogového výstupu, který jsme museli přepracovat např. v lekci 11. 
 
 ## Komponenty
 
@@ -18,9 +18,9 @@ Digitální čidlo teploty a vlhkosti DHT11 je kompozitní senzor, který obsahu
 
 ## Princip
 
-Pouze tři piny jsou k dispozici pro použití: VCC, GND, a DATA. Komunikační proces začíná posláním startového signálu do DHT11. Pak DHT11 přijímá signál a vrací odpověď. Poté hostitel přijme odpověď a začne přijímat 40bitová data (8-bitové integer vlhkost + 8-bitové decimal vlhkost + 8-bitové integer teplota + 8-bitové decimal teplota + 8 bitů checksum).
+Čidlo má pouze 3 piny: VCC, GND, a DATA. Komunikační proces začíná posláním startového signálu do DHT11, které pak přijímá signál a vrací odpověď. Hostitel poté začne přímat přijímat 40ti bitový balíček dat (16 bitů pro vlhkost (8 pro celá čísla a 8 pro desetinná) + 16 bitů pro teplotu (8 pro celá čísla a 8 pro desetinná) + 8 bitů pro kontrolu správnosti dat).
 
-## Postup experimentu
+## Postup projektu
 
 | I2C LCD1602 | Arduino |
 |---|---|
@@ -116,8 +116,10 @@ void loop() {
 ```
 <!-- /kod -->
 
-**Krok 3:** Zkompiluj kód
+**Krok 3:** Připoj desku k počítači
 
-**Krok 4:** Nahraj sketch do Arduina
+**Krok 4:** Vyber desku a port
+
+**Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
 Teď uvidíš aktuální vlhkost a teplotu na displeji.

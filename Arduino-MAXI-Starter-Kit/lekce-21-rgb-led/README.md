@@ -2,7 +2,7 @@
 
 ## Úvod
 
-RGB LED jsou svítivé diody, které obsahují 3 základní barvy na jednom komponentu. Tyto barvy jsou červená, zelená a modrá, a typicky jsou jsou zabaleny do průhledného nebo poloprůhledného plastového pláště se čtyřmi kolíky. Pokud si pamatuješ výuku z prvního stupně, tak určitě víš, že z červené, zelené a modré lze míchat a vytvářet všechny druhy barev pomocí aditivního míchání, takže si můžeš udělat RGB LED vyzařující barevné světlo. Stejný způsob míchání barev využívají více méně všechny plnobarevné monitory, televize, a obrazovky na světě.
+RGB LED jsou svítivé diody, které obsahují 3 základní barvy na jednom komponentu. Tyto barvy jsou červená, zelená a modrá. Diody bývají zalité v průhledném nebo poloprůhledném plastovém pouzdře se čtyřmi vývody. Pokud si pamatuješ výuku z prvního stupně, tak určitě víš, že z červené, zelené a modré lze míchat a vytvářet všechny druhy barev pomocí aditivního míchání, takže si můžeš udělat RGB LED vyzařující barevné světlo. Stejný způsob míchání barev využívají víceméně všechny plnobarevné monitory, televize a obrazovky na světě.
 
 ## Komponenty
 
@@ -15,9 +15,9 @@ RGB LED jsou svítivé diody, které obsahují 3 základní barvy na jednom komp
 
 ## Princip
 
-V tomto experimentu budeme používat technologii PWM pro ovládání jasu RGB LED. Už jsme to popsali v lekci 2 tohoto kitu. Pokud si potřebuješ osvěžit paměť, tak si ji klidně projdi ještě jednou.
+V tomto experimentu budeme používat technologii PWM pro ovládání jasu RGB LED. Už jsme to popsali v lekci 2 tohoto kitu. Pokud si potřebuješ osvěžit paměť, klidně si tu lekci projdi ještě jednou.
 
-Každý ze tří kanálů má 255 stupňů jasu. Pokud ze tří základních barev jsou všechny 0, LED zhasne. Pokud jsou všechny 255, LED bude svítit nejjasnější možnou bílou. Různé barvy se pak namícháme tak, že do kolíků pustíme hodnoty mezi 0 a 255.
+Každý ze tří kanálů má 256 stupňů jasu (0–255). Pokud jsou všechny tři základní barvy na 0, LED zhasne. Pokud jsou všechny 255, LED bude svítit nejjasnější možnou bílou. Různé barvy pak namícháme tak, že do kolíků pustíme hodnoty mezi 0 a 255.
 
 RGB LED lze rozdělit na následující typy: společná anoda a společná katoda. V tomto experimentu budeme používat RGB LED se společnou katodou.
 
@@ -27,7 +27,7 @@ RGB LED lze rozdělit na následující typy: společná anoda a společná kato
 
 <p align="center"><img src="img/obr-02.png" width="56%" alt=""></p>
 
-| RGB LED module | Arduino |
+| RGB LED modul | Arduino |
 |---|---|
 | R | 11 |
 | G | 10 |

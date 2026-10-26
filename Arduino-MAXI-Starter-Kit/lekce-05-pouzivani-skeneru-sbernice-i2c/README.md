@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Dozvěděli jsme se od našeho zákazníka, že existují převodníky, které mají jinou I2C adresu, než popisujeme v další lekci (prý dostal převodník s adresou 0x3F, což se samozřejmě může stát). Tak jsme se rozhodli přidat tuhle lekci a naučit Tě skenovat adresy na sběrnici I2C.
+Dozvěděli jsme se od našeho zákazníka, že existují převodníky, které mají jinou I2C adresu, než popisujeme v další lekci (prý dostal převodník s adresou 0x3F, což se samozřejmě může stát). Tak jsme se rozhodli přidat tuhle lekci a naučit tě skenovat adresy na sběrnici I2C.
 
 ## Komponenty
 
@@ -14,15 +14,15 @@ Dozvěděli jsme se od našeho zákazníka, že existují převodníky, které m
 
 Každé zařízení s I2C sběrnicí má adresu I2C, kterou používá k přijímání příkazů nebo odesílání zpráv. Bohužel je to jedna z oblastí, kde dokumentace často chybí. Tak se pojďme podívat a najít adresu na příkladu I2C převodníku pro LCD displej.
 
-Tento velmi jednoduchý sketch skenuje sběrnici I2C pro zařízení. Pokud je zařízení nalezeno, je hlášeno v sériovém monitoru Arduino.
+Tento velmi jednoduchý sketch prohledává sběrnici I2C a hledá na ní zařízení. Každé nalezené zařízení vypíše do sériového monitoru Arduino IDE.
 
-Sketch zobrazuje 7-bitové adresy nalezených zařízení jako hexadecimální hodnoty. Tato hodnota může být použita pro funkci "Wire.begin", která používá 7-bitovou adresu. Každé nalezené zařízení na sběrnici I2C je hlášeno. Zapojovat a odpojovat I2C zařízení můžeš za běhu aplikace.
+Sketch zobrazuje 7bitové adresy nalezených zařízení jako hexadecimální hodnoty. Tato hodnota může být použita pro funkci "Wire.begin", která používá 7bitovou adresu. Každé nalezené zařízení na sběrnici I2C je hlášeno. Zapojovat a odpojovat I2C zařízení můžeš za běhu aplikace.
 
 ## Postup experimentu
 
 **Krok 1:** Vytvoř obvod
 
-Spojení mezi I2C LCD1602 a Arduino:
+Spojení mezi I2C LCD1602 a Arduinem:
 
 | I2C LCD1602 | UNO R3 / UNO R4 WiFi | Arduino Mega |
 |---|---|---|

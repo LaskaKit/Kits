@@ -2,25 +2,25 @@
 
 ## Úvod
 
-Tento senzor funguje na principu detekce infračerveného světla vlnové délky, která odpovídá běžným typům plamene. V tomto projektu si ukážeme, jak takový senzor použít.
+Tento senzor funguje na principu detekce infračerveného světla o vlnové délce, která odpovídá běžným typům plamene. V tomto projektu si ukážeme, jak takový senzor použít.
 
 ## Komponenty
 
 - Arduino
 - USB kabel
 - Senzor plamene
-- 1x Rezistor (10kΩ)
+- 1× Rezistor (10 kΩ)
 - Breadboard vodiče
 
 <p align="center"><img src="img/obr-01.jpg" width="54%" alt=""></p>
 
 ## Princip
 
-Existuje několik typů senzoru plamene, ale v tomto projektu budeme využívat infračervené čidlo, které dokáže rozpoznat světlo o vlnové délce od 700nm do 1000nm (typická vlnová délka pro plameny obyčejných hořlavin). Infračervená zjistí intenzitu světla v okolí, a Arduino poté převede analogovou hodnotu do digitální podoby. 
+Existuje několik typů senzorů plamene, ale v tomto projektu budeme využívat infračervené čidlo, které dokáže rozpoznat světlo o vlnové délce od 700 nm do 1000 nm (typická vlnová délka pro plameny obyčejných hořlavin). Infračervené čidlo zjistí intenzitu světla v okolí a Arduino poté převede analogovou hodnotu do digitální podoby. 
 
 ## Postup projektu
 
-**Krok 1:** Vytvoř obvod. Kratší kolík senzoru je katoda a ten druhý je anoda. Spoj katodu s 5V pinem a anodu s rezistorem; připoj druhý konec rezistoru ke GND, připoj jeden konec propojovacího vodiče na anodu, druhý konec k analogovému pinu, viz níže.
+**Krok 1:** Vytvoř obvod. Kratší kolík senzoru je katoda a ten druhý je anoda. Spoj katodu s 5V pinem a anodu s rezistorem. Druhý konec rezistoru připoj ke GND. Jeden konec propojovacího vodiče připoj na anodu a druhý k analogovému pinu, viz níže.
 
 <p align="center"><img src="img/obr-02.png" width="27%" alt=""> <img src="img/obr-03.png" width="29%" alt=""></p>
 
@@ -41,7 +41,7 @@ Existuje několik typů senzoru plamene, ale v tomto projektu budeme využívat 
  * Zapojení:
  *   Senzor plamene (IR dioda): kratší nožička (katoda) na 5V,
  *   delší nožička (anoda) na A0
- *   Odpor 10 kΩ: mezi A0 a GND
+ *   Rezistor 10 kΩ: mezi A0 a GND
  *   LED: vestavěná LED „L“ na pinu 13
  *
  * Knihovny: žádné (jen Arduino IDE)
@@ -80,4 +80,4 @@ void loop() {
 
 **Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
-Když nyní rozsvítíš zapalovač nedaleko čidla, LED na pinu 13 na Arduino se rozsvítí.
+Když nyní nedaleko čidla zapálíš zapalovač, rozsvítí se LED na pinu 13 Arduina.

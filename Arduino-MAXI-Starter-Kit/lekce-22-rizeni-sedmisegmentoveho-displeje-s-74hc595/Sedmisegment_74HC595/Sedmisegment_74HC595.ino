@@ -8,7 +8,7 @@
  * Zapojení:
  *   74HC595: DS (14)–11, SH_CP (11)–8, ST_CP (12)–12,
  *   VCC (16) a MR (10) na 5V, GND (8) a OE (13) na GND
- *   Výstupy Q0–Q7 přes odpor 220 Ω na segmenty podle schématu v návodu
+ *   Výstupy Q0–Q7 přes rezistor 220 Ω na segmenty podle schématu v návodu
  *   Společný vývod displeje: CC na GND, CA na 5V
  *
  * Knihovny: žádné (jen Arduino IDE)

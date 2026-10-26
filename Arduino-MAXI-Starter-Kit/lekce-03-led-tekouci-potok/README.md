@@ -1,16 +1,16 @@
-# Lekce 3: LED Tekoucí potok
+# Lekce 3: LED tekoucí potok
 
 ## Úvod
 
-V této lekci uděláme jednoduchý, ale zajímavý projekt – pomocí LED vytvoříme tekoucí LED světla. Tato plynulá světla jsou tvořena osmi LED v řadě, která se postupně rozsvítí a tmavnou jeden po druhém, stejně jako tekoucí voda.
+V této lekci uděláme jednoduchý, ale zajímavý projekt – pomocí LED vytvoříme tekoucí LED světla. Tato plynulá světla jsou tvořena osmi LED v řadě, které se postupně rozsvěcují a zhasínají jedna po druhé, stejně jako tekoucí voda.
 
 ## Komponenty
 
 - Arduino
 - Breadboard
 - Breadboard vodiče
-- 8x LED
-- 8x Rezistor (220Ω)
+- 8× LED
+- 8× Rezistor (220 Ω)
 - USB kabel
 ## Princip
 
@@ -86,4 +86,4 @@ void loop() {
 
 **Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
-Nyní bys měl vidět osm LED světel, která se rozzáří jedno po druhém - zleva doprava, a potom ztlumeně postupně - zprava doleva. A zase opačně. Celý tento proces se bude opakovat, dokud bude obvod napájen.
+Nyní uvidíš, jak se osm LED rozsvítí jedna po druhé zleva doprava a potom postupně zhasnou zprava doleva. A pak totéž opačným směrem. Celý tento proces se bude opakovat, dokud bude obvod napájen.

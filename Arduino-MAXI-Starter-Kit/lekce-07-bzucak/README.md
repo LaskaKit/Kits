@@ -2,25 +2,25 @@
 
 ## Úvod
 
-Bzučáky jsou velmi jednoduché výstupní prvky, které ti umožňují přidat do svého projektu zvukovou signalizaci. Často se s nimi setkáváš v běžném životě (například u mikrovlnky, tiskárny/kopírky, nebo dokonce u některých počítačových základových desek).
+Bzučáky jsou velmi jednoduché výstupní prvky, které ti umožňují přidat do svého projektu zvukovou signalizaci. Často se s nimi setkáváš v běžném životě (například u mikrovlnky, tiskárny/kopírky nebo dokonce u některých počítačových základních desek).
 
 ## Komponenty
 
 - Arduino
 - Breadboard
 - USB kabel
-- Aktivní bzučak
+- Aktivní bzučák
 - Breadboard vodiče
 
 ## Princip
 
-Bzučáky můžeme rozdělit na aktivní nebo pasivní (viz následující obrázek). Otoč kolíčky obou bzučáků lícem nahoru - ten se zelenou kulatou destičkou je pasivní, zatímco ten zalitý černým lepidlem (polymerem) je bzučák aktivní.
+Bzučáky můžeme rozdělit na aktivní nebo pasivní (viz následující obrázek). Otoč oba bzučáky kolíčky nahoru – ten se zelenou kulatou destičkou je pasivní, zatímco ten zalitý černým lepidlem (polymerem) je aktivní.
 
 <p align="center"><img src="img/obr-01.png" width="49%" alt=""></p>
 
 Rozdíl mezi aktivním a pasivním bzučákem:
 
-Aktivní bzučák má v sobě zabudovaný oscilační zdroj, takže bude vydávat zvuky, pokud bude pod proudem. Pasivní bzučák ale takový zdroj nemá, proto při použití stejnosměrného napětí pípat nebude – místo toho je potřeba použít čtvercové vlny s frekvencí mezi 2K a 5K. Aktivní bzučák bývá často nákladnější a to právě z důvodu několika zabudovaných oscilátorů. V následujícím pokusu použijeme bzučák aktivní.
+Aktivní bzučák má v sobě zabudovaný oscilační zdroj, takže bude vydávat zvuky, pokud bude pod proudem. Pasivní bzučák ale takový zdroj nemá, proto při použití stejnosměrného napětí pípat nebude – místo toho je potřeba použít obdélníkový signál s frekvencí 2–5 kHz. Aktivní bzučák bývá často dražší, a to právě kvůli zabudovanému oscilátoru. V následujícím pokusu použijeme bzučák aktivní.
 
 ## Postup experimentu
 

@@ -5,7 +5,8 @@
  * ID a pozdrav a na 2 s sepne relé (např. elektrický zámek).
  * Neznámá karta relé nesepne.
  * ID svých karet zjistíš programem RFID_zjisti_ID a zapíšeš je
- * do pole povoleneKarty níže.
+ * do pole povoleneKarty níže. Pozdrav pro kartu 2 nastavíš
+ * v proměnné osloveni.
  *
  * Zapojení:
  *   RFID RC522: 3.3V–3,3V (NE 5V!), GND–GND, RST–9, SDA (SS)–10, IRQ nezapojuj
@@ -40,9 +41,14 @@ const byte povoleneKarty[pocetKaret][4] = {
   {0xD0, 0xE7, 0xC2, 0x80},  // karta 1
   {0x4B, 0xE6, 0xD1, 0x3B}   // karta 2 (přívěsek)
 };
+// Oslovení pro kartu 2 (přívěsek) – na displeji se ukáže „Ahoj <oslovení>!“.
+// Změň si ho třeba na své jméno (bez diakritiky, nejvýš 10 znaků).
+const char osloveni[] = "bastliri";
+
+char pozdrav2[17];  // sem setup() složí „Ahoj <oslovení>!“
 const char *pozdravy[pocetKaret] = {
   "Zdravim bastlire",
-  "  Ahoj Kosto!   "
+  pozdrav2
 };
 
 void setup() {
@@ -52,6 +58,13 @@ void setup() {
 
   pinMode(relePin, OUTPUT);
   digitalWrite(relePin, !RELE_ZAPNUTO);  // relé vypnuté
+
+  // složit pozdrav pro kartu 2 a vycentrovat ho na 16 znaků displeje
+  char text[17];
+  snprintf(text, sizeof(text), "Ahoj %s!", osloveni);
+  int odsazeni = (16 - (int)strlen(text)) / 2;
+  memset(pozdrav2, ' ', odsazeni);
+  strcpy(pozdrav2 + odsazeni, text);
 
   lcd.init();
   lcd.backlight();

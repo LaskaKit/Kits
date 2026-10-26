@@ -6,7 +6,7 @@
  *
  * Zapojení:
  *   Řádky matice: R1–10, R2–A1, R3–2, R4–13, R5–9, R6–3, R7–8, R8–5
- *   Sloupce přes odpor 220 Ω: C1–A0, C2–7, C3–6, C4–11, C5–4, C6–12, C7–A2, C8–A3
+ *   Sloupce přes rezistor 220 Ω: C1–A0, C2–7, C3–6, C4–11, C5–4, C6–12, C7–A2, C8–A3
  *   (čísla pinů matice viz tabulka v návodu)
  *
  * Knihovny: žádné (jen Arduino IDE)

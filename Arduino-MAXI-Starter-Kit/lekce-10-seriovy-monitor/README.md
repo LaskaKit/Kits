@@ -2,20 +2,20 @@
 
 ## Úvod
 
-Sériový monitor se používá ke komunikaci mezi Arduino deskou a počítačem nebo jinými přístroji, a v této lekci se naučíme, jak s jeho pomocí zapnout a vypnout LED.  Jedná se o zabudovaný software v Arduino prostředí a otevře se kliknutím na tlačítko v pravém horním rohu. Můžeš posílat a získávat data pomocí sériového portu na Arduino desce a ovládat desku pomocí klávesnice. V této lekci používáme 3 LED, a proto můžeš do sériového monitoru napsat červenou, žlutou nebo modrou barvu na sériový monitor v IDE. Odpovídající LED na Arduino se tímto rozsvítí.
+Sériový monitor se používá ke komunikaci mezi Arduino deskou a počítačem nebo jinými přístroji. V této lekci se naučíme, jak s jeho pomocí zapnout a vypnout LED. Jde o nástroj zabudovaný v prostředí Arduino IDE, který se otevře kliknutím na tlačítko v pravém horním rohu. Můžeš posílat a získávat data pomocí sériového portu na Arduino desce a ovládat desku pomocí klávesnice. V této lekci používáme 3 LED, a proto můžeš do sériového monitoru v IDE napsat červenou, žlutou nebo modrou barvu. Tím se rozsvítí odpovídající LED.
 
 ## Komponenty
 
 - Arduino
 - Breadboard
-- 3x LED
-- 3x Rezistor (220Ω)
+- 3× LED
+- 3× Rezistor (220 Ω)
 - Breadboard vodiče
 - USB kabel
 
 ## Princip
 
-Zde slouží sériový monitor jako přestupní stanice pro komunikaci mezi tvým počítačem a Arduino. Nejprve převede počítač data do sériového monitoru a ta jsou poté přečtena pomocí Arduina. To pak provede další operace.
+Zde slouží sériový monitor jako přestupní stanice pro komunikaci mezi tvým počítačem a Arduinem. Počítač nejprve odešle data přes sériový monitor, Arduino je přečte a pak podle nich provede další operace.
 
 ## Postup experimentu
 
@@ -38,9 +38,9 @@ Zde slouží sériový monitor jako přestupní stanice pro komunikaci mezi tvý
  * Funguje s jakýmkoli nastavením konce řádku v sériovém monitoru.
  *
  * Zapojení:
- *   Modrá LED přes odpor 220 Ω na pin 2
- *   Žlutá LED přes odpor 220 Ω na pin 3
- *   Červená LED přes odpor 220 Ω na pin 4
+ *   Modrá LED přes rezistor 220 Ω na pin 2
+ *   Žlutá LED přes rezistor 220 Ω na pin 3
+ *   Červená LED přes rezistor 220 Ω na pin 4
  *   Katody všech LED na GND
  *
  * Knihovny: žádné (jen Arduino IDE)

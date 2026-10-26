@@ -2,7 +2,7 @@
 
 <p align="center"><img src="img/obr-01.png" width="65%" alt=""></p>
 
-Tento článek popisuje, jak připojit Tvoje Arduino k počítači a nahrát první projekt (sketch).
+Tento článek popisuje, jak připojit tvoje Arduino k počítači a nahrát první projekt (sketch).
 
 ## 1. Připrav si Arduino a USB kabel
 

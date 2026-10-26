@@ -6,7 +6,7 @@
  *
  * Zapojení:
  *   Fotorezistor: jeden vývod na 5V, druhý na A0
- *   Odpor 10 kΩ: mezi A0 a GND
+ *   Rezistor 10 kΩ: mezi A0 a GND
  *   Aktivní bzučák: + na pin 9, – na GND
  *
  * Knihovny: žádné (jen Arduino IDE)

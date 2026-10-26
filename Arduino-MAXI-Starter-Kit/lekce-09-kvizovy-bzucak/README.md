@@ -2,21 +2,21 @@
 
 ## Úvod
 
-Ve vědomostních soutěžích, především těch zábavních (např. soutěže v odpovídání na otázky), organizátoři často používají bzučákový systém k přesnému a spravedlivému určení pořadí odpovídajících hráčů. Nyní je systém schopný objektivně ilustrovat přesnost a spravedlivost soutěže, čímž dělá pořad zábavnější. V této lekci budeme používat tlačítka, bzučáky a LED a vytvoříme kvízový bzučák.
+Ve vědomostních soutěžích, především těch zábavních (např. soutěže v odpovídání na otázky), organizátoři často používají bzučákový systém k přesnému a spravedlivému určení pořadí odpovídajících hráčů. Takový systém dokáže objektivně zajistit přesnost a spravedlnost soutěže, čímž dělá pořad zábavnější. V této lekci budeme používat tlačítka, bzučáky a LED a vytvoříme kvízový bzučák.
 
 ## Komponenty
 
 - Arduino
 - USB kabel
-- 4 Tlačítka
-- 4x LED
-- 4x Rezistor (220Ω)
-- Aktivní bzučak
+- 4× Tlačítko
+- 4× LED
+- 4× Rezistor (220 Ω)
+- Aktivní bzučák
 - Breadboard vodiče
 - Breadboard
 ## Princip
 
-Tlačítka 1, 2 a 3 slouží k odpovídání a tlačítkem 4 se resetuje. Pokud se nejprve zmáčke tlačítko 1, bzučák pípne, odpovídající LED se rozsvítí a všechny další LED zhasnou. Chceme-li začít další kolo, jednoduše zmáčkneme tlačítko 4.
+Tlačítka 1, 2 a 3 slouží k odpovídání a tlačítkem 4 se resetuje. Pokud se nejprve zmáčkne tlačítko 1, bzučák pípne, odpovídající LED se rozsvítí a všechny další LED zhasnou. Chceme-li začít další kolo, jednoduše zmáčkneme tlačítko 4.
 
 ## Postup experimentu
 
@@ -36,7 +36,7 @@ Tlačítka 1, 2 a 3 slouží k odpovídání a tlačítkem 4 se resetuje. Pokud 
  * LaskaKit Arduino MAXI Starter kit – Lekce 9: Kvízový bzučák
  *
  * Tlačítkem 4 moderátor spustí kolo (rozsvítí se LED 4).
- * Kdo z hráčů 1–3 stiskne tlačítko první, toho LED se rozsvítí
+ * Kdo z hráčů 1–3 stiskne tlačítko jako první, tomu se rozsvítí LED
  * a zazní bzučák. Ostatní tlačítka se ignorují, dokud moderátor
  * znovu nestiskne tlačítko 4.
  *
@@ -114,6 +114,6 @@ void pipni() {
 
 **Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
-Nyní nejprve zmáčkni tlačítko 4. Pokud prvně zmáčkneš tlačítko 1, rozsvítí se odpovídající LED a pípne bzučák. Poté opět zmáčkni tlačítko 4 k resetování, než začneš s dalšími tlačítky.
+Nyní nejprve zmáčkni tlačítko 4. Pokud pak jako první zmáčkneš tlačítko 1, rozsvítí se odpovídající LED a pípne bzučák. Poté opět zmáčkni tlačítko 4 k resetování, než začneš s dalšími tlačítky.
 
 <p align="center"><img src="img/obr-03.png" width="71%" alt=""></p>

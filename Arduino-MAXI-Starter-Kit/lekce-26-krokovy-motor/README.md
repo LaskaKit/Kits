@@ -2,11 +2,11 @@
 
 ## Úvod
 
-Krokové motory, díky své jedinečné konstrukci, mohou být ovládány s vysokou přesností a bez jakýchkoli mechanismů zpětné vazby. Na hřídel krokového motoru je namontována série magnetů, řízena za pomoci elektromagnetických cívek, které budí elektrické impulzy. Díky tomuto mechanickému zpracování se krokové motory dokáží se přesně otáčet dopředu a dozadu v pomalých „krocích“. Dokonce se dokáži otočit i o půl nebo čvtvrtkrok.
+Krokové motory, díky své jedinečné konstrukci, mohou být ovládány s vysokou přesností a bez jakýchkoli mechanismů zpětné vazby. Na hřídeli krokového motoru je namontována série magnetů, řízená pomocí elektromagnetických cívek, které jsou buzeny elektrickými impulzy. Díky tomuto mechanickému zpracování se krokové motory dokážou přesně otáčet dopředu a dozadu v malých „krocích“. Dokonce se dokážou otočit i o půlkrok nebo čtvrtkrok.
 
-Existují dva typy krokových motorů – unipolarní a bipolarní. Je velmi důležité, abys věděl, s jakým typem pracuješ. V tomto experimentu použijeme unipolarní krokový motor.
+Existují dva typy krokových motorů – unipolární a bipolární. Je velmi důležité vědět, s jakým typem pracuješ. V tomto experimentu použijeme unipolární krokový motor.
 
-Arduino desky nebo kontrolery nemohou přímo řídit krokové motory. Je tedy nezbytný řídící řadič krokového motoru (jako je ukázáno na následujícím obrázku).
+Arduino desky nebo kontrolery nemohou přímo řídit krokové motory. Je tedy nezbytný řadič krokového motoru (jako je ukázáno na následujícím obrázku).
 
 ## Komponenty
 
@@ -14,7 +14,7 @@ Arduino desky nebo kontrolery nemohou přímo řídit krokové motory. Je tedy n
 - USB kabel
 - Potenciometr
 - Krokový motor
-- Řadič krokový motor
+- Řadič krokového motoru
 - Breadboard vodiče
 - Breadboard
 
@@ -24,25 +24,21 @@ Arduino desky nebo kontrolery nemohou přímo řídit krokové motory. Je tedy n
 
 ## Princip
 
-Tento krokový motor je čtyřfázový a používá stejnosměrný napájecí zdroj. Po napájení všech fází motoru dle příslušného pořadí se začne otáčet krok za krokem. Schematický diagram čtyřfázového krokového motoru je znázorněn níže:
+Uvnitř krokového motoru je otočný magnet (rotor) a kolem něj čtyři cívky, zde fungující jako elektromagnety. Když pustíš proud do jedné cívky, přitáhne si magnet k sobě a rotor se k ní natočí. Když pak proud přepneš do sousední cívky, rotor se posune o kousek dál. Tomuto posunu se říká krok.
 
 <p align="center"><img src="img/obr-03.png" width="47%" alt=""></p>
 
-Na obrázku je uprostřed motoru rotor – permanentní magnet ve tvaru ozubeného kola. Okolo rotoru je 0 až 5 zubů. Více jich je venku. Tam je 8 magnetických pólů, každý se dvěma protilehlými a ty jsou spojené vinutou cívkou. Takže tvoří čtyři páry od A do D. Ty se nazývají fáze. Mají čtyři vodiče připojené ke spínačům SA, SB, SC a SD. Proto jsou čtyři fáze paralelně v obvodu a dva magnetické póly v jedné fázi jsou v sérii.
+Když cívky zapínáš jednu po druhé ve správném pořadí (A, B, C, D, A…), rotor se otáčí krok za krokem. Opačné pořadí ho roztočí na druhou stranu a rychlost přepínání určuje rychlost otáčení. Motor udělá přesně tolik kroků, kolik mu pošleš, takže vždy víš, kde je jeho hřídel, a to bez jakéhokoli čidla (na rozdíl od serv).
 
-Níže se dočteš, jak 4-fázový krokový motor funguje. Pokud je to příliš technické, tak není ostuda se k tomuto vysvětlení dostat později ;)
+Motor 28BYJ-48 ze stavebnice má navíc převodovku, takže jedna otáčka hřídele odpovídá 2048 krokům. Díky tomu se dá natáčet velmi jemně, ale otáčí se pomalu (nejvýš asi 15 otáček za minutu).
 
-Na začátku je spínač SB zapnutý, spínače SA, SC a SD jsou vypnuty a magnetické póly ve fázi B jsou zarovnány s ozubením 0 a 3 rotoru. Současně 1 a 4 vytváří střídavě uspořádané zuby s C- a D-fází pólu. Zuby 2 a 5 vytvářejí odstupňované zuby s póly D a A fáze. Když je spínač SC zapnutý, spínače SB, SA a SD jsou vypnuty, rotor se otáčí pod magnetickým polem C vinutí a mezi zubem 1 a 4. Potom se zub 1 a 4 vyrovná s magnetickými póly C-fázového vinutí. Když zub 0 a 3 vytváří stoupavé zuby s póly fáze A a B, zuby 2 a 5 vytváří stoupavé zuby s magnetickými póly A až D. Podobné situace se neustále opakují. Zapněte fáze A, B, C a D, rotor se začne otáčet v pořadí of A, B, C a D.
-
-Čtyřfázový krokový motor má tři provozní režimy: samostatný čtyř-krokový, dvojitý čtyř-krokový a osmi-krokový. Krokový úhel pro samostatný čtyř-krokový a dvojitý čtyř-krokový režim je stejný, ale hnací moment pro samostatný čtyř-krokový režim je menší. Krokový úhel pro osmi-krokový režim je poloviční, než u režimu samostatného čtyř-krokového a dvojitého čtyř-krokového. Osmistupňový provozní režim tak může udržet vysoký hnací moment a zlepšit přesnost řízení. V tomto experimentu necháváme krokový motor pracovat v osmi-krokovém režimu.
-
-Pokud chcete použít motor v obvodu, musíte použít řídící desku. Řadič krokového motoru ULN2003 je 7-kanálový invertorový obvod. To znamená, že když je konec vstupu na vysoké úrovni, konec výstupu ULN2003 je na nízké úrovni, a naopak. Pokud je na IN1 vysoká úroveň a nízká úroveň na IN2, IN3 a IN4, pak je konec výstupu OUT1 na nízké úrovni a všechny ostatní konce jsou na úrovni vysoké. To tedy znamená, že D1 se rozsvítí, spínač SA se zapne a krokový motor se začne otáčet. Tato situace se bude stále opakovat. Proto stačí dát krokovému motoru určitou časovou posloupnost. Ten se pak bude postupně otáčet. ULN2003 se zde používá k poskytnutí konkrétních časových sekvencí pro krokový motor.
+Cívky potřebují větší proud, než dokáže dát pin Arduina. Proto je mezi Arduinem a motorem řadič ULN2003: Arduino mu jen říká, kterou cívku zapnout, a řadič ji sepne. Kontrolky na řadiči ukazují, která cívka je právě zapnutá. Pořadí přepínání cívek za tebe řeší knihovna Stepper, takže v programu stačí říct, o kolik kroků se má motor otočit.
 
 ## Postup projektu
 
 **Krok 1:** Vytvoř obvod
 
-Zapojení mezi Krokovým motorem-řadičem a Arduino:
+Zapojení mezi řadičem krokového motoru a Arduinem:
 
 <p align="center"><img src="img/obr-04.png" width="65%" alt=""></p>
 
@@ -53,7 +49,7 @@ Zapojení mezi Krokovým motorem-řadičem a Arduino:
 | IN3 | 10 |
 | IN4 | 11 |
 | GND | GND |
-| VCC | 5v |
+| VCC | 5V |
 
 **Krok 2:** Napiš kód do Arduino IDE
 

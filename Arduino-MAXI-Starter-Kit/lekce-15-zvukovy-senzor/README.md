@@ -2,11 +2,11 @@
 
 ## Úvod
 
-Mikrofon v nějaké formě pravděpodobně máte připojen i k zařízení, na kterém tento manuál čtete. Tento modul mikrofonu ovšem funguje trochu jinak. Má dva výstupy:
+Mikrofon v nějaké formě pravděpodobně obsahuje i zařízení, na kterém tento návod čteš. Tento modul mikrofonu ovšem funguje trochu jinak. Má dva výstupy:
 
 A0: Analogový výstup, který se používá pro výstup napěťových signálů z mikrofonu v reálném čase. Analogický k funkci standardních mikrofonů.
 
-D0: Dosáhne-li intenzita zvuku určité prahové hodnoty (nastavené pomocí potenciometru), bude na výstupu snímače vysoké nebo nízké úrovně.
+D0: Dosáhne-li intenzita zvuku určité prahové hodnoty (nastavené pomocí potenciometru), objeví se na výstupu snímače vysoká nebo nízká úroveň.
 
 <p align="center"><img src="img/obr-01.png" width="47%" alt=""></p>
 
@@ -19,13 +19,13 @@ D0: Dosáhne-li intenzita zvuku určité prahové hodnoty (nastavené pomocí po
 
 ## Princip
 
-Mikrofon umí konvertovat audio signál na analogový elektrický signál, pak stačí signál převést na digitální hodnotu s pomocí ADC, a na Arduino ji zpracovat. Níže je vidět schéma mikrofonu:
+Mikrofon převádí zvuk na analogový elektrický signál. Ten pak stačí pomocí ADC převést na digitální hodnotu a zpracovat ji v Arduinu. Níže je vidět schéma mikrofonu:
 
 <p align="center"><img src="img/obr-02.jpg" width="33%" alt=""></p>
 
-LM393 je komparátor napětí. Pokud je napětí na pinu 3 vyšší, než je invertující pin 2, výstupní pin 1 bude  mít log. hodnotu 1. V opačném případě log. hodnotu 0. 
+LM393 je komparátor napětí. Pokud je napětí na pinu 3 vyšší než na invertujícím pinu 2, bude mít výstupní pin 1 log. hodnotu 1. V opačném případě log. hodnotu 0. 
 
-Nejdříve nastav potenciometr, aby napětí na pinu 2 LM393 bylo méně než 5V. Pokud neslyšíš žádný zvuk, odpor mikrofonu je velmi velký. Napětí na pinu 3 LM393 je blízko k napájecímu napětí (5V). Na pinu DO je log.1 a LEDka svítí. Pokud slyšíš hluk, odpor mikrofonu klesne, pin DO modulu bude mít log.0 a LEDka se vypne.
+Nejdříve nastav potenciometr tak, aby napětí na pinu 2 LM393 bylo nižší než 5 V. Pokud není slyšet žádný zvuk, je odpor mikrofonu velmi velký. Napětí na pinu 3 LM393 se pak blíží napájecímu napětí (5 V), na pinu DO je log. 1 a LEDka svítí. Pokud se ozve hluk, odpor mikrofonu klesne, pin DO modulu bude mít log. 0 a LEDka zhasne.
 
 ## Postup projektu
 

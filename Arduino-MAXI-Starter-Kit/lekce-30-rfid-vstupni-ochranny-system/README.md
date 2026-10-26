@@ -2,7 +2,7 @@
 
 ## Úvod
 
-RFID je zkratka pro radiofrekvenční identifikaci. Jedná se o bezdrátovou aplikaci pro přenos dat za účelem identifikace a sledování značek. V tomto experimentu budeme používat modul RFID, relé a I2C LCD1602 pro sestavení vstupního ochranného systému.
+RFID je zkratka pro radiofrekvenční identifikaci. Jedná se o bezdrátovou technologii pro přenos dat za účelem identifikace a sledování značek. V tomto experimentu budeme používat modul RFID, relé a I2C LCD1602 pro sestavení vstupního ochranného systému.
 
 ## Komponenty
 
@@ -11,7 +11,7 @@ RFID je zkratka pro radiofrekvenční identifikaci. Jedná se o bezdrátovou apl
 - RFID čtečka
 - RFID čipový přívěsek na klíče
 - RFID čipová karta
-- 1-kanál relé modul
+- 1kanálový modul relé
 - I2C LCD1602
 - Breadboard vodiče
 - Breadboard
@@ -130,7 +130,8 @@ void loop() {
  * ID a pozdrav a na 2 s sepne relé (např. elektrický zámek).
  * Neznámá karta relé nesepne.
  * ID svých karet zjistíš programem RFID_zjisti_ID a zapíšeš je
- * do pole povoleneKarty níže.
+ * do pole povoleneKarty níže. Pozdrav pro kartu 2 nastavíš
+ * v proměnné osloveni.
  *
  * Zapojení:
  *   RFID RC522: 3.3V–3,3V (NE 5V!), GND–GND, RST–9, SDA (SS)–10, IRQ nezapojuj
@@ -165,9 +166,14 @@ const byte povoleneKarty[pocetKaret][4] = {
   {0xD0, 0xE7, 0xC2, 0x80},  // karta 1
   {0x4B, 0xE6, 0xD1, 0x3B}   // karta 2 (přívěsek)
 };
+// Oslovení pro kartu 2 (přívěsek) – na displeji se ukáže „Ahoj <oslovení>!“.
+// Změň si ho třeba na své jméno (bez diakritiky, nejvýš 10 znaků).
+const char osloveni[] = "bastliri";
+
+char pozdrav2[17];  // sem setup() složí „Ahoj <oslovení>!“
 const char *pozdravy[pocetKaret] = {
   "Zdravim bastlire",
-  "  Ahoj Kosto!   "
+  pozdrav2
 };
 
 void setup() {
@@ -177,6 +183,13 @@ void setup() {
 
   pinMode(relePin, OUTPUT);
   digitalWrite(relePin, !RELE_ZAPNUTO);  // relé vypnuté
+
+  // složit pozdrav pro kartu 2 a vycentrovat ho na 16 znaků displeje
+  char text[17];
+  snprintf(text, sizeof(text), "Ahoj %s!", osloveni);
+  int odsazeni = (16 - (int)strlen(text)) / 2;
+  memset(pozdrav2, ' ', odsazeni);
+  strcpy(pozdrav2 + odsazeni, text);
 
   lcd.init();
   lcd.backlight();
@@ -248,6 +261,8 @@ Otevři sériový monitor (9600 baud) a přilož kartu nebo přívěsek ke čte�
 ```cpp
 {0xD0, 0xE7, 0xC2, 0x80},  // karta 1
 ```
+
+Pozdrav pro druhou kartu (přívěsek) nastavíš v proměnné osloveni. Výchozí hodnota je „bastliri“, takže na displeji uvidíš „Ahoj bastliri!“. Můžeš sem napsat třeba své jméno (bez diakritiky, nejvýš 10 znaků).
 
 **Krok 5:** Nahraj program RFID\_pristupovy\_system do Arduina
 

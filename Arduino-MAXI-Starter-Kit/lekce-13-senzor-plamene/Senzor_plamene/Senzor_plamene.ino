@@ -9,7 +9,7 @@
  * Zapojení:
  *   Senzor plamene (IR dioda): kratší nožička (katoda) na 5V,
  *   delší nožička (anoda) na A0
- *   Odpor 10 kΩ: mezi A0 a GND
+ *   Rezistor 10 kΩ: mezi A0 a GND
  *   LED: vestavěná LED „L“ na pinu 13
  *
  * Knihovny: žádné (jen Arduino IDE)

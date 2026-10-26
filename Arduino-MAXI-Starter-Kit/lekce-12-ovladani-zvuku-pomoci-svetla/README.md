@@ -2,23 +2,23 @@
 
 ## Úvod
 
-Už ses naučil, jak pracovat s fotorezistorem. Teď s těmito znalostmi postavíš komplexnější projekt, kde intenzita světla bude ovládat frekvenci pípání bzučáku.
+Práci s fotorezistorem už znáš. Teď s těmito znalostmi postavíš komplexnější projekt, kde intenzita světla bude ovládat frekvenci pípání bzučáku.
 
 ## Komponenty
 
 - Arduino
 - USB kabel
 - Fotorezistor
-- Aktivní bzučak
-- 1x Rezistor (10KΩ)
+- Aktivní bzučák
+- 1× Rezistor (10 kΩ)
 - Breadboard vodiče
 - Breadboard
 
 ## Princip
 
-Když posvítíš na fotorezistor, tak se odpor fotorezistoru se sníží; a naopak.
+Když posvítíš na fotorezistor, jeho odpor se sníží, a naopak.
 
-V tomto projektu je výstup fotorezistoru vyslán do pinu A0 na Arduino a poté zpracován ADC převaděčem, který vytvoří digitální signál z analogového. Tento signál používáme jako parametr funkce delay() v kódu, než se ozve bzučák. Pokud je dopadající světlo silné, je výsledná hodnota vyšší, což znamená, že bude bzučák pípat pomalu; je-li světlo slabé, výsledná hodnota je nižší a bzučák bude pípat rychleji.
+V tomto projektu je výstup fotorezistoru přiveden na pin A0 Arduina a poté zpracován A/D převodníkem, který z analogového signálu vytvoří digitální. Tento signál používáme jako parametr funkce delay() v kódu, než se ozve bzučák. Pokud je dopadající světlo silné, je výsledná hodnota vyšší, což znamená, že bude bzučák pípat pomalu; je-li světlo slabé, výsledná hodnota je nižší a bzučák bude pípat rychleji.
 
 ## Postup experimentu
 
@@ -77,4 +77,4 @@ void loop() {
 
 **Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
-Pokud postavíš fotorezistor do tmy, bude bzučák pípat rychle; vystavíš-li fotorezistor světlu, bude pípat pomalu.
+Pokud dáš fotorezistor do tmy, bude bzučák pípat rychle; vystavíš-li fotorezistor světlu, bude pípat pomalu.

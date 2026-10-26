@@ -2,12 +2,12 @@
 
 ## Úvod
 
-V lekci 18 jsme si ukázali, jak řídit sedmisegmentové displeje s pomocí Arduino bez speciálních obvodů, ovšem to není jediná možnost, jak řídit několik sedmisegmentových displejů pomocí Arduino. Další způsob je použití posuvných registrů. Zde použijeme osmibitový posuvný registr 74HCT595.
+V lekci 18 jsme si ukázali, jak řídit sedmisegmentové displeje pomocí Arduina bez speciálních obvodů. To ovšem není jediná možnost, jak řídit několik sedmisegmentových displejů pomocí Arduina. Dalším způsobem je použití posuvných registrů. Zde použijeme osmibitový posuvný registr 74HC595.
 
 ## Komponenty
 
 - Arduino
-- 8x Rezistor (220Ω)
+- 8× Rezistor (220 Ω)
 - Posuvný registr 74HC595
 - Breadboard vodiče
 - Breadboard
@@ -16,33 +16,33 @@ V lekci 18 jsme si ukázali, jak řídit sedmisegmentové displeje s pomocí Ard
 
 ## Princip
 
-Co vůbec posuvný registr dělá? V zásadě je to soustava klopných obvodů (obvod který v sobě drží stav logické 1, 0 a dokonce v tomto případě stav vysoké impedance (HZ)), kterými se logická informace posouvá dále pomocí hodinového impulsu. K vysvětlení má posuvný registr celkem pro nás potřebné 3 vstupy (SER, SRCLK, SCLK) a celkem v našem případě 8 výstupů (Q0 – Q7).  74HC595 se skládá ze tří částí: posuvný registr, záchytný registr a třístavové výstupy. 
+Co vůbec posuvný registr dělá? V zásadě je to soustava klopných obvodů (obvod, který v sobě drží stav logické 1 nebo 0, a v tomto případě dokonce i stav vysoké impedance (HZ)), kterými se logická informace posouvá dále pomocí hodinového impulsu. Posuvný registr má 3 vstupy, které pro nás budou důležité (SER, SRCLK, SCLK), a v našem případě 8 výstupů (Q0–Q7). 74HC595 se skládá ze tří částí: posuvného registru, záchytného registru a třístavových výstupů. 
 
-K ovládání 8 výstupů jsou zapotřebí pouze 3 piny na Arduino. 74HC595 je široce používán k řízení např. segmentových displejů. Můžeme nastavit buď výstupní piny log.1, log.0 nebo stav vysoké impedance. Navíc jich lze propojit několik mezi sebou (takzvaně "daisy-chain").
+K ovládání 8 výstupů jsou zapotřebí pouze 3 piny Arduina. 74HC595 je široce používán k řízení např. segmentových displejů. Výstupní piny můžeme nastavit na log. 1, na log. 0, nebo do stavu vysoké impedance. Navíc jich lze propojit několik mezi sebou (takzvaně "daisy-chain").
 
 ## Zapojení
 
-Propojení 74HC595, Arduino a sedmisegmentovky může vypadat takto:
+Propojení 74HC595, Arduina a sedmisegmentovky může vypadat takto:
 
 <p align="center"><img src="img/obr-01.png" width="25%" alt=""></p>
 
 Piny 74HC595 a jejich funkce:
 
-Q0-Q7: 8-bitové výstupy, které jsou schopné řídit 8 LED nebo 8 pinů sedmisegmentového displeje
+Q0–Q7: osm výstupů, které dokážou řídit 8 LED nebo 8 pinů sedmisegmentového displeje
 
-Q7S: Serial data output pin, který slouží k propojení s dalším obvodem 74HCT595
+Q7S: Serial data output pin, který slouží k propojení s dalším obvodem 74HC595
 
 MR: Reset pin, aktivní na log.0; zapojíme ho na +5V
 
 SH: Shift register clock input je určen pro hodinový signál
 
-ST: Storage register clock input, na náběžné hraně, údaje v posuvném registru přesune do paměťového
+ST: Storage register clock input, na náběžné hraně přesune údaje z posuvného registru do paměťového
 
-OE : Output enable pin, aktivní na log.0; zapojíme ho na GND
+OE: Output enable pin, aktivní na log.0; zapojíme ho na GND
 
-Ds : Serial data input pin, sem se zapisují data
+Ds: Serial data input pin, sem se zapisují data
 
-Zde se používá funkce shiftout (), která je dodávána s Arduino IDE. Jednoduše zadej číslo mezi 0 a 255 a registr úložiště ho může převést na 8bitové binární číslo a paralelně jej vyvést. Toto ti umožní snadno ovládat 8 pinů sedmisegmentového displeje a vytvořit libovolné schéma.
+Zde se používá funkce shiftOut(), která je součástí Arduino IDE. Jednoduše zadej číslo mezi 0 a 255 a registr ho převede na 8bitové binární číslo a paralelně ho vyvede na výstupy. To ti umožní snadno ovládat 8 pinů sedmisegmentového displeje a zobrazit libovolný vzor.
 
 ## Postup experimentu
 
@@ -68,7 +68,7 @@ Máš displej se společnou anodou (CA)? Zapoj jeho společný vývod (COM) na 5
  * Zapojení:
  *   74HC595: DS (14)–11, SH_CP (11)–8, ST_CP (12)–12,
  *   VCC (16) a MR (10) na 5V, GND (8) a OE (13) na GND
- *   Výstupy Q0–Q7 přes odpor 220 Ω na segmenty podle schématu v návodu
+ *   Výstupy Q0–Q7 přes rezistor 220 Ω na segmenty podle schématu v návodu
  *   Společný vývod displeje: CC na GND, CA na 5V
  *
  * Knihovny: žádné (jen Arduino IDE)

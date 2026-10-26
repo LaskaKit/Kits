@@ -2,19 +2,19 @@
 
 ## Úvod
 
-V této lekci použijeme 4-místný sedmisegmentový displej pro vytvoření stopek.
+V této lekci použijeme 4místný sedmisegmentový displej pro vytvoření stopek.
 
 ## Komponenty
 
 - Arduino
 - USB kabel
-- 4-místný sedmisegmentový displej
+- 4místný sedmisegmentový displej
 - Breadboard vodiče
 - Breadboard
-- 8x Odpor (220Ω)
+- 8× Rezistor (220 Ω)
 ## Princip
 
-Pokud je použit 7- segmentový LED displej a jestli se jedná o displej se společnou anodou, připoj anodový pin do zdroje. Pokud se jedná o displej se společnou katodou, připoj katodu do GND. Pokud se použije 4-místný 7-segmentový LED displej, pin “společná anoda nebo katoda“ se používá pro kontrolu zobrazené číslice. Může být tedy zobrazena jenom jedna číslice. Nicméně, protože je to založeno na efektu Persistence of Vision, můžeme vidět čtyři 7-segmentové displeje a všechny budou zobrazovat nějaká čísla. Důvodem je, že elektronická rychlost skenování je příliš vysoká a my tedy nestihneme zaznamenat blikání.
+Pokud používáš jednomístný sedmisegmentový LED displej se společnou anodou, připoj anodový pin ke zdroji. Pokud se jedná o displej se společnou katodou, připoj katodu ke GND. U 4místného sedmisegmentového LED displeje se pin „společná anoda nebo katoda“ používá k ovládání zobrazené číslice. V jednu chvíli tak může svítit jen jedna číslice. Díky efektu setrvačnosti oka (Persistence of Vision) ale vidíme všechny čtyři číslice najednou. Důvodem je, že se číslice přepínají tak rychle, že blikání nestihneme zaznamenat.
 
 <p align="center"><img src="img/obr-01.png" width="28%" alt=""></p>
 
@@ -60,7 +60,7 @@ Zapojení mezi 4místným sedmisegmentovým displejem a Arduinem:
  * Podle typu displeje nastav řádek SPOLECNA_ANODA.
  *
  * Zapojení:
- *   Segmenty přes odpor 220 Ω: a–2, b–3, c–4, d–5, e–6, f–7, g–8, p–9
+ *   Segmenty přes rezistor 220 Ω: a–2, b–3, c–4, d–5, e–6, f–7, g–8, p–9
  *   Číslice: D1–10, D2–11, D3–12, D4–13 (D1 je číslice úplně vlevo)
  *
  * Knihovny: žádné (jen Arduino IDE)

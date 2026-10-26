@@ -2,13 +2,13 @@
 
 ## Úvod
 
-LM35 od firmy National Semiconductor je teplotní čidlo, které převádí teplotu na předvídatelé napětí s maximální nelinearitou ±0,75 °C v rozsahu teplot -55 °C až 150 °C (zjednodušeně řečeno, ve standardním rozsahu teplot bývá přesné na ±0,75°C). Často používaná varianta obvodu je zapouzdřena v malém plastovém pouzdře TO-92, ale existuje i verze ve větším plastovém pouzdře TO-220 a verze v kovovém pouzdře TO-46. Převodník se vyrábí i v provedení SMD pro montáž přímo na povrch plošného spoje (SMT).
+LM35 od firmy National Semiconductor je teplotní čidlo, které převádí teplotu na předvídatelné napětí s maximální nelinearitou ±0,75 °C v rozsahu teplot -55 °C až 150 °C (zjednodušeně řečeno, ve standardním rozsahu teplot bývá přesné na ±0,75 °C). Často používaná varianta obvodu je zapouzdřena v malém plastovém pouzdře TO-92, ale existuje i verze ve větším plastovém pouzdře TO-220 a verze v kovovém pouzdře TO-46. Převodník se vyrábí i v provedení SMD pro montáž přímo na povrch plošného spoje (SMT).
 
 Napájecí napětí převodníku – pokud se pohybuje v rozsahu 4 V až 20 V – nemusí být stabilizované a převodník lze tudíž napájet přímo z baterie. V základním zapojení pro měření teploty je převodník připojen ke zdroji napětí, což může být např. 9V baterie, a na výstupu převodníku je voltmetr.
 
 <p align="center"><img src="img/obr-01.png" width="20%" alt=""></p>
 
-Pokud se mají měřit kladné i záporné teploty, zapojení vychází o něco složitěji. LM35 se používá i jako převodník teplota/napětí pro Arduino.
+Pokud se mají měřit kladné i záporné teploty, zapojení vychází o něco složitější. LM35 se používá i jako převodník teplota/napětí pro Arduino.
 
 ## Komponenty
 
@@ -21,7 +21,7 @@ Pokud se mají měřit kladné i záporné teploty, zapojení vychází o něco 
 
 ## Princip
 
-Každý jeden stupeň celsia, který naměří čidlo, vyprodukuje na výstupu 10 mV (tj. _převodní koeficient_ je 10mV/°C). Prakticky to znamená, že se např. při teplotě 150 °C se na výstupu převodníku objeví napětí 1500 mV. Bude-li měřená teplota záporná, např. −40 °C, bude i výstupní napětí záporné (−400 mV).
+Každý stupeň Celsia, který naměří čidlo, vyprodukuje na výstupu 10 mV (tj. _převodní koeficient_ je 10 mV/°C). Prakticky to znamená, že se např. při teplotě 150 °C na výstupu převodníku objeví napětí 1500 mV. Bude-li měřená teplota záporná, např. −40 °C, bude i výstupní napětí záporné (−400 mV).
 
 Vzorec výpočtu je následující:
 

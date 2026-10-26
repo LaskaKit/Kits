@@ -2,15 +2,15 @@
 
 ## Úvod
 
-Poté, co ses už naučil tolik samostatných modulů, pojď si zkombinovat tyto moduly dohromady a vytvořit něco zábavného a interaktivního. V této lekci použijeme I2C LCD1602, modul relé a klávesnici k sestavení jednoduchého hesla k zámku. To je založeno na Arduino-mikrokontroleru a obecně je využito hlavně pro bezpečnostní dveře.
+Teď, když už znáš tolik samostatných modulů, pojď je zkombinovat dohromady a vytvořit něco zábavného a interaktivního. V této lekci použijeme I2C LCD1602, modul relé a klávesnici k sestavení jednoduchého zámku na heslo. Zámek je založený na mikrokontroléru Arduino; podobná řešení se používají hlavně u bezpečnostních dveří.
 
 ## Komponenty
 
 - Arduino
 - USB kabel
-- 1-kanál relé modul
+- 1kanálový modul relé
 - I2C LCD1602
-- 4x4 Maticová tlačítková klávesnice
+- Maticová klávesnice 4×4
 - Breadboard vodiče
 
 <p align="center"><img src="img/obr-01.jpg" width="51%" alt=""></p>
@@ -19,7 +19,7 @@ Poté, co ses už naučil tolik samostatných modulů, pojď si zkombinovat tyto
 
 Heslo (výchozí 123456) je nastavené v programu. Po zapnutí se na displeji I2C LCD1602 objeví „Vitej!“ a relé je vypnuté. Stiskni tlačítko označené hvězdičkou „\*“, zadej heslo a potvrď ho tlačítkem „#“. Pokud je heslo správné, relé na 2 sekundy sepne a na displeji se objeví „Spravne!“ a „Vstup“. Pokud zadáš jiné heslo, objeví se „Chyba!“ a „Zkus to znovu“ a relé zůstane vypnuté. Po dvou sekundách se na displeji znovu objeví „Vitej!“.
 
-POZNÁMKA: Prostřednictvím programování nastav čtyři tlačítka v první řadě (s piny v horní části, jak vidíš na obrázku), jako 1,2,3,4; ve druhé řadě jako 5,6,7,8; ve třetí řadě jako 9,A,B a C; ve čtvrté řadě jako D, \*, 0, #.
+POZNÁMKA: V programu jsou čtyři tlačítka v první řadě (s piny v horní části, jak vidíš na obrázku) nastavená jako 1, 2, 3, 4; ve druhé řadě jako 5, 6, 7, 8; ve třetí řadě jako 9, A, B, C; ve čtvrté řadě jako D, \*, 0, #.
 
 ## Postup experimentu
 
@@ -28,13 +28,13 @@ POZNÁMKA: Prostřednictvím programování nastav čtyři tlačítka v první �
 | I2C LCD1602 | Arduino |
 |---|---|
 | GND | GND |
-| VCC | 5v |
+| VCC | 5V |
 | SDA | A4 (Mega: 20) |
 | SCL | A5 (Mega: 21) |
 
 Modul relé zapoj jako v lekci 25, jen signál S připoj na pin 13.
 
-Zapojení mezi klávesnicí a Arduino:
+Zapojení mezi klávesnicí a Arduinem:
 
 | Klávesnice | Arduino |
 |---|---|
@@ -166,4 +166,4 @@ void zobrazVitej() {
 
 **Krok 4:** Nahraj sketch do Arduina
 
-Nyní se na displeji I2C LCD1602 po zapnutí objeví „Vitej!“ a relé je vypnuté. Pokud stiskneš tlačítko „\*“, objeví se „Zadej heslo:“. Číslice se při psaní zobrazují jako hvězdičky. Pokud zadáš „123456“ a stiskneš „#“ pro potvrzení, objeví se „Spravne!“ „Vstup“ a relé na 2 sekundy sepne. Pokud zadáš něco jiného, objeví se „Chyba!“ „Zkus to znovu“ a relé zůstane vypnuté. Po dvou sekundách se znovu objeví „Vitej!“.
+Nyní se na displeji I2C LCD1602 po zapnutí objeví „Vitej!“ a relé je vypnuté. Pokud stiskneš tlačítko „\*“, objeví se „Zadej heslo:“. Číslice se při psaní zobrazují jako hvězdičky. Pokud zadáš „123456“ a stiskneš „#“ pro potvrzení, objeví se „Spravne!“ a „Vstup“ a relé na 2 sekundy sepne. Pokud zadáš něco jiného, objeví se „Chyba!“ a „Zkus to znovu“ a relé zůstane vypnuté. Po dvou sekundách se znovu objeví „Vitej!“.

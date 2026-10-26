@@ -7,9 +7,9 @@
  * Funguje s jakýmkoli nastavením konce řádku v sériovém monitoru.
  *
  * Zapojení:
- *   Modrá LED přes odpor 220 Ω na pin 2
- *   Žlutá LED přes odpor 220 Ω na pin 3
- *   Červená LED přes odpor 220 Ω na pin 4
+ *   Modrá LED přes rezistor 220 Ω na pin 2
+ *   Žlutá LED přes rezistor 220 Ω na pin 3
+ *   Červená LED přes rezistor 220 Ω na pin 4
  *   Katody všech LED na GND
  *
  * Knihovny: žádné (jen Arduino IDE)

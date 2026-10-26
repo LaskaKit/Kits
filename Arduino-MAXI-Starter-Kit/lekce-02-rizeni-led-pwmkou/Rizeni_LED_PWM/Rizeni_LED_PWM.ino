@@ -5,7 +5,7 @@
  * Jas se řídí pulzně šířkovou modulací (PWM) funkcí analogWrite().
  *
  * Zapojení:
- *   LED (anoda, delší nožička) přes odpor 220 Ω na pin 9
+ *   LED (anoda, delší nožička) přes rezistor 220 Ω na pin 9
  *   LED (katoda, kratší nožička) na GND
  *
  * Knihovny: žádné (jen Arduino IDE)

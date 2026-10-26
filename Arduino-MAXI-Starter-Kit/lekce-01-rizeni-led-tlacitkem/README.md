@@ -11,7 +11,7 @@ V tomto experimentu se dozvíš, jak zapnout / vypnout LEDku (svítící diodu) 
 - Arduino
 - USB kabel
 - Tlačítko
-- Rezistor (10kΩ)
+- Rezistor (10 kΩ)
 - Breadboard vodiče
 - Breadboard
 
@@ -19,13 +19,13 @@ V tomto experimentu se dozvíš, jak zapnout / vypnout LEDku (svítící diodu) 
 
 ## Princip
 
-S tlačítky už určite máš mnoho zkušeností. Jedná o nejčastější ovládací prvek v elektronice, a proto se také vyrábí v nevyčitatelném množství tvarů a velikostí. Zde jsme použili 12 mm tlačítko, viz následující obrázky. Piny, na které ukazují šipky stejné barvy, jsou propojeny.
+S tlačítky už určitě máš mnoho zkušeností. Jedná se o nejčastější ovládací prvek v elektronice, a proto se také vyrábí v nespočetném množství tvarů a velikostí. Zde jsme použili 12 mm tlačítko, viz následující obrázky. Piny, na které ukazují šipky stejné barvy, jsou propojeny.
 
 Při stisknutí tlačítka se piny, na které ukazují modré šipky, připojí na piny označené červenou šipkou.
 
-Obecně platí, že tlačítko je přímo napojeno na LED za účelem zapnutí a vypnutí LED. Takové spojení je relativně jednoduché, ale někdy se v něm LED rozsvítí automaticky (bez stisknutí tlačítka). To může být způsobeno různýmy typy rušení. Aby se zabránilo těmto vnějším zásahům, je použit pull-down rezistor pro připojení 1K–10KΩ Rezistoru mezi tlačítkem, portem a GND. Toto se využívá k ničení vnějších zásahů, zatímco je připojeno GND tak dlouho, dokud je tlačítko vypnuté.
+Obecně platí, že tlačítko je přímo napojeno na LED za účelem zapnutí a vypnutí LED. Takové spojení je relativně jednoduché, ale někdy se v něm LED rozsvítí automaticky (bez stisknutí tlačítka). To může být způsobeno různými typy rušení. Aby se zabránilo těmto vnějším zásahům, používá se pull-down rezistor, což je rezistor s hodnotou 1–10 kΩ zapojený mezi vstupní port (tlačítko) a GND. Ten odvádí rušení a drží vstup na GND tak dlouho, dokud tlačítko není stisknuté.
 
-Toto připojení obvodu je široce používáno v řadě obvodů a elektronických zařízení. Například, pokud stiskneš jakékoli tlačítko na svém telefonu, rozsvítí se Ti podsvícení.
+Toto připojení obvodu je široce používáno v řadě obvodů a elektronických zařízení. Například, pokud stiskneš jakékoli tlačítko na svém telefonu, rozsvítí se ti podsvícení.
 
 ## Postup experimentu
 
@@ -50,7 +50,7 @@ Toto připojení obvodu je široce používáno v řadě obvodů a elektronický
  *   Rezistor 10 kΩ: mezi pin 12 a GND (drží vstup v klidu na LOW)
  *   LED: vestavěná LED „L“ na pinu 13 (nic nezapojuješ)
  *
- * Knihovny: žádné
+ * Knihovny: žádné (jen Arduino IDE)
  * Desky:    Arduino UNO R3, Arduino UNO R4 WiFi, Arduino Mega 2560
  *
  * Verze návodu 3.0 (10/2026)
@@ -82,4 +82,4 @@ void loop() {
 
 **Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
-Nyní stiskni tlačítko a LED na Arduino se rozsvítí.
+Nyní stiskni tlačítko a LED na Arduinu se rozsvítí.

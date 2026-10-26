@@ -5,7 +5,7 @@
  * Potenciometrem měníš rychlost běhu.
  *
  * Zapojení:
- *   8× LED přes odpor 220 Ω na piny 2 až 9, katody na GND
+ *   8× LED přes rezistor 220 Ω na piny 2 až 9, katody na GND
  *   Potenciometr: krajní vývody na 5V a GND, prostřední vývod na A0
  *
  * Knihovny: žádné (jen Arduino IDE)

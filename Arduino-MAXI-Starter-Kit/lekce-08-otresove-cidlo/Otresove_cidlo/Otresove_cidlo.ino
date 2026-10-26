@@ -3,7 +3,7 @@
  *
  * Když čidlem pohneš nebo ho nakloníš, kulička uvnitř spojí kontakty
  * a rozsvítí se LED na desce Arduino (pin 13).
- * Vstup používá vnitřní pull-up odpor, žádný další odpor není potřeba.
+ * Vstup používá interní pull-up rezistor, žádný další rezistor není potřeba.
  *
  * Zapojení:
  *   Otřesové čidlo: jeden vývod na pin 2, druhý na GND
@@ -21,7 +21,7 @@ const int cidloPin = 2;  // otřesové čidlo
 
 void setup() {
   pinMode(ledPin, OUTPUT);
-  pinMode(cidloPin, INPUT_PULLUP);  // zapnout vnitřní pull-up odpor
+  pinMode(cidloPin, INPUT_PULLUP);  // zapnout interní pull-up rezistor
 }
 
 void loop() {

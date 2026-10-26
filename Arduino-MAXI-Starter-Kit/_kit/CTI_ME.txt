@@ -14,7 +14,7 @@ Potřebné knihovny (Arduino IDE > Správce knihoven):
 Všechny programy jsou ověřené překladem pro Arduino UNO R3, Arduino UNO R4 WiFi
 a Arduino Mega 2560 (Arduino AVR Boards 1.8.8, Arduino UNO R4 Boards 1.6.0).
 
-Starou složku „Library“ z předchozí verze už nepotřebuješ – pokud jsi ji kopíroval
-do Arduino/libraries, smaž ji.
+Starou složku „Library“ z předchozí verze už nepotřebuješ – pokud ji máš nakopírovanou
+v Arduino/libraries, smaž ji.
 
 LaskaKit | https://www.laskakit.cz | podpora@laskakit.cz

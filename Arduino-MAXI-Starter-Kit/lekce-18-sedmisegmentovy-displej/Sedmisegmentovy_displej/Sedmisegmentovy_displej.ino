@@ -7,7 +7,7 @@
  * jak to zjistit, popisuje návod. Podle typu nastav řádek SPOLECNA_ANODA.
  *
  * Zapojení:
- *   Segmenty přes odpor 220 Ω: a–7, b–6, c–5, d–11, e–10, f–8, g–9, dp–4
+ *   Segmenty přes rezistor 220 Ω: a–7, b–6, c–5, d–11, e–10, f–8, g–9, dp–4
  *   Společný vývod (prostřední pin): CC displej na GND, CA displej na 5V
  *
  * Knihovny: žádné (jen Arduino IDE)

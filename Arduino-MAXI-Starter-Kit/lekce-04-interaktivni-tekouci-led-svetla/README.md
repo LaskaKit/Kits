@@ -2,20 +2,20 @@
 
 ## Úvod
 
-V minulé lekci ses už naučil, jak se dělají tekoucí LED světla. V této lekci přidáme potenciometr, který bude měnit interval blikání pomocí nastavení potenciometru.
+Minulá lekce ukázala, jak se dělají tekoucí LED světla. V této lekci přidáme potenciometr, kterým budeš měnit interval blikání.
 
 ## Komponenty
 
 - Arduino
 - Breadboard
-- 8x LED
-- 8x Rezistor (220Ω)
+- 8× LED
+- 8× Rezistor (220 Ω)
 - Potenciometr
 - USB kabel
 - Breadboard vodiče
 ## Princip
 
-Princip je poměrně jednoduchý. Zapne se 8 LEDek podle pořadí. A pak se změní časový interval zapnutí a vypnutí LED pomocí nastavení potenciometru.
+Princip je poměrně jednoduchý. Postupně se zapne 8 LEDek. Potenciometrem se pak mění časový interval zapnutí a vypnutí LED pomocí nastavení potenciometru.
 
 ## Postup experimentu
 
@@ -89,4 +89,4 @@ void posunLed() {
 
 **Krok 4:** Nahraj sketch do Arduina
 
-Nyní bys měl vidět osm LED světel, která se rozzáří jedno po druhém, podle pořadí. Nastav potenciometr a přijdeš na to, že časový interval zapnutí a vypnutí LEDek se změní.
+Nyní uvidíš osm LED světel, která se rozzáří jedno po druhém. Otoč potenciometrem a uvidíš, že se časový interval zapnutí a vypnutí LEDek změní.

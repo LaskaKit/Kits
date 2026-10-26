@@ -2,22 +2,22 @@
 
 ## Úvod
 
-Fotorezistor (anglicky photorezistor/photocell) je světlem ovládaný proměnný rezistor. Odpor fotorezistoru se snižuje s rostoucí intenzitou dopadajícího světla; jinými slovy, je fotovodivý. Fotorezistor můžeme využít pro na světlo citlivé detektory, jež se aktivují světlem či tmou.
+Fotorezistor (anglicky photoresistor/photocell) je světlem ovládaný proměnný rezistor. Odpor fotorezistoru se snižuje s rostoucí intenzitou dopadajícího světla; jinými slovy, je fotovodivý. Fotorezistor můžeme využít pro na světlo citlivé detektory, jež se aktivují světlem či tmou.
 
 ## Komponenty
 
 - Arduino
 - USB kabel
 - Fotorezistor
-- Rezistor (10KΩ)
-- 8x LED
-- 8x Rezistor (220Ω)
+- Rezistor (10 kΩ)
+- 8× LED
+- 8× Rezistor (220 Ω)
 - Breadboard vodiče
 - Breadboard
   
 ## Princip
 
-Odpor ve fotorezistoru se mění na základě intenzity na něho dopadajícího světla. Když se intenzita tohoto světla zvýší, odpor se sníží a naopak. V tomto projektu použijeme 8 LED. Čím větší bude intenzita světla, tím více LED se rozsvítí. Až dosáhneme určité intenzity světla, rozsvítí se všechny LED. V případě žádného světla se nerozsvítí nic.
+Odpor ve fotorezistoru se mění na základě intenzity na něho dopadajícího světla. Když se intenzita tohoto světla zvýší, odpor se sníží a naopak. V tomto projektu použijeme 8 LED. Čím větší bude intenzita světla, tím více LED se rozsvítí. Až dosáhneme určité intenzity světla, rozsvítí se všechny LED. Bez světla se nerozsvítí žádná.
 
 ## Postup experimentu
 
@@ -40,8 +40,8 @@ Odpor ve fotorezistoru se mění na základě intenzity na něho dopadajícího 
  *
  * Zapojení:
  *   Fotorezistor: jeden vývod na 5V, druhý na A0
- *   Odpor 10 kΩ: mezi A0 a GND
- *   8× LED přes odpor 220 Ω na piny 5 až 12, katody na GND
+ *   Rezistor 10 kΩ: mezi A0 a GND
+ *   8× LED přes rezistor 220 Ω na piny 5 až 12, katody na GND
  *
  * Knihovny: žádné (jen Arduino IDE)
  * Desky:    Arduino UNO R3, Arduino UNO R4 WiFi, Arduino Mega 2560
@@ -84,8 +84,8 @@ void loop() {
 
 **Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
-Posviť na fotorezistor a uvidíš několik LED, jak se rozsvítí. Posviť více a rozsvítí se LED o to víc. Jakmile fotorezistor postavíš do tmy, všechna LED zhasnou.
+Posviť na fotorezistor a uvidíš, jak se několik LED rozsvítí. Posviť víc a rozsvítí se jich víc. Jakmile fotorezistor dáš do tmy, všechny LED zhasnou.
 
 Vyzkoušej!
 
-Kromě výše uvedeného experimentu můžeš také vyměnit fotorezistor za mikrofon a pozorovat, jak LED signalizuje sílu zvuku. Čím vyšší bude síla zvuku, tím vice LED se rozsvítí. Vyzkoušej si tento pokus na vlastní kůži a uvidíš.
+Kromě výše uvedeného experimentu můžeš také vyměnit fotorezistor za mikrofon a pozorovat, jak LED signalizují sílu zvuku. Čím vyšší bude síla zvuku, tím více LED se rozsvítí. Vyzkoušej si tento pokus na vlastní kůži a uvidíš.

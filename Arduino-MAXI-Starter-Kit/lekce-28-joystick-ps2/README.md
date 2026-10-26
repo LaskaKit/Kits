@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Joystick je vstupní zařízení, sestávající z tyče, která se otáčí na základně a udává úhel nebo směr k ovládacímu systému zařízení. Joysticky jsou často používány pro ovládání videoher a robotů. Zde je použit PS2 joystick.
+Joystick je vstupní zařízení sestávající z páčky, která se otáčí na základně a předává úhel nebo směr ovládacímu systému zařízení. Joysticky jsou často používány pro ovládání videoher a robotů. Zde je použit PS2 joystick.
 
 <p align="center"><img src="img/obr-01.png" width="41%" alt=""></p>
 
@@ -15,7 +15,7 @@ Joystick je vstupní zařízení, sestávající z tyče, která se otáčí na 
 
 ## Princip
 
-Tento modul má dva analogové výstupy (odpovídající souřadnicím X a Y) a jeden digitální výstup, představující tlačítko na ose Z.
+Tento modul má dva analogové výstupy (odpovídající souřadnicím X a Y) a jeden digitální výstup představující tlačítko na ose Z.
 
 ## Postup experimentu
 

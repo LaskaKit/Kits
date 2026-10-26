@@ -11,10 +11,10 @@ Rezistory (hovorově "odpory") ve stavebnici mají pět barevných proužků: t�
 
 <p align="center"><img src="img/obr-01.jpg" width="96%" alt=""></p>
 
-Pokud si hodnotou nejsi jistý, změř ji multimetrem.
+Pokud máš o hodnotě pochybnosti, změř ji multimetrem.
 
 ## Poznámka ke schématům
 
-Ve schématech se typicky setkáte s jedním ze dvou značení rezistorů – Americkým (IEEE/ANSI) a Evropským (IEC). V tomto návodu se setkáte se značením Americkým.
+Ve schématech se setkáš s jedním ze dvou značení rezistorů – americkým (IEEE/ANSI), nebo evropským (IEC). V tomto návodu se setkáš hlavně se značením americkým.
 
 <p align="center"><img src="img/obr-2.png" width="30%" alt=""></p>

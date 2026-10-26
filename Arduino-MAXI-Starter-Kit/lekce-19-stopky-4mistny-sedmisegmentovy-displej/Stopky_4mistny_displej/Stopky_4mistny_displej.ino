@@ -9,7 +9,7 @@
  * Podle typu displeje nastav řádek SPOLECNA_ANODA.
  *
  * Zapojení:
- *   Segmenty přes odpor 220 Ω: a–2, b–3, c–4, d–5, e–6, f–7, g–8, p–9
+ *   Segmenty přes rezistor 220 Ω: a–2, b–3, c–4, d–5, e–6, f–7, g–8, p–9
  *   Číslice: D1–10, D2–11, D3–12, D4–13 (D1 je číslice úplně vlevo)
  *
  * Knihovny: žádné (jen Arduino IDE)

@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Servomotor (Servo) je typ motoru, který ví v jaké pozici se nachází a tak se dokáže otočit o specifický úhel. Levná serva se často ovládají za pomocí PWM modulace, která řekne servu jaké pozice se má otočit.
+Servomotor (servo) je typ motoru, který ví, v jaké pozici se nachází, a tak se dokáže otočit o konkrétní úhel. Levná serva se často ovládají pomocí PWM modulace, která servu řekne, do jaké pozice se má otočit.
 
 Servo má tři vodiče. Hnědý vodič je GND, červený vodič je VCC a oranžový vodič je signál.
 
@@ -17,7 +17,7 @@ Servo má tři vodiče. Hnědý vodič je GND, červený vodič je VCC a oranžo
 
 ## Princip
 
-Servo se skládá z pláště, obvodové desky, non-jádra motoru, převodovky a detekce polohy (často ve formě potenciometru). Jeho pracovní princip je následující: Arduino vysílá signál PWM do serva. Tam je tento signál přepočítán na směr otáčení a finální úhel, a pak je tato hnací síla přenášena na otočné rameno pomocí ozubeného převodu. 
+Servo se skládá z pláště, obvodové desky, bezjádrového motoru, převodovky a detekce polohy (často ve formě potenciometru). Jeho pracovní princip je následující: Arduino vysílá signál PWM do serva. Tam je tento signál přepočítán na směr otáčení a finální úhel, a pak je tato hnací síla přenášena na otočné rameno pomocí ozubeného převodu. 
 
 ## Postup experimentu
 

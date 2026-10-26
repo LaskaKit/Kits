@@ -1,8 +1,8 @@
-# Lekce 20: 8x8 LED matice
+# Lekce 20: 8×8 LED matice
 
 ## Úvod
 
-Maticové LED displeje jsou přesně to, co si myslíš - "mřížka" propojených ledek. Mají mnoho výhod oproti LCD nebo sedmisegmentovkám, se kterými už máš parxi. Oproti LCD jsou větší a lépe čitelné, a narozdíl od sedmisegmentovek nemají limitace v počtu znaků které na nich lze zobrazit. Navíc díky způsobu zapojení LED stačí 16 pinů pro 64 diod.
+Maticové LED displeje jsou přesně to, co si myslíš – „mřížka“ propojených LEDek. Mají mnoho výhod oproti LCD nebo sedmisegmentovkám, se kterými už máš praxi. Oproti LCD jsou větší a lépe čitelné a na rozdíl od sedmisegmentovek nemají omezení v počtu znaků, které na nich lze zobrazit. Navíc díky způsobu zapojení LED stačí 16 pinů pro 64 diod.
 
 <p align="center"><img src="img/obr-01.gif" width="34%" alt=""></p>
 
@@ -10,8 +10,8 @@ Maticové LED displeje jsou přesně to, co si myslíš - "mřížka" propojený
 
 - Arduino
 - USB kabel
-- LED matice 8x8
-- 8x Rezistor (220Ω)
+- LED matice 8×8
+- 8× Rezistor (220 Ω)
 - Breadboard
 - Breadboard vodiče
 
@@ -19,7 +19,7 @@ Maticové LED displeje jsou přesně to, co si myslíš - "mřížka" propojený
 
 ## Princip
 
-Pin číslování odpovídá výše uvedenému řádku a sloupci:
+Číslování pinů odpovídá výše uvedeným řádkům a sloupcům:
 
 | Sloupec (COL) | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
 |---|---|---|---|---|---|---|---|---|
@@ -28,9 +28,9 @@ Pin číslování odpovídá výše uvedenému řádku a sloupci:
 | **Řádek (ROW)** | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
 | č. pinu matice | 9 | 14 | 8 | 12 | 1 | 7 | 2 | 5 |
 
-Princip 8x8 maticového LED displeje:
+Princip 8×8 maticového LED displeje:
 
-8x8 LED matice se skládá z 64 LED a každá LEDka je umístěna na průsečíku řádku a sloupce. Když je elektrická úroveň určité řady vysoká a elektrická úroveň určitého sloupce nízká, pak se odpovídající LED rozsvítí. Chceš-li rozsvítit LED na první pokus, měl bys nastavit řádek 1 na vysokou úroveň (log. 1) a sloupec 1 na nízkou úroveň (log. 0). Pak se LED na prvním bodě rozsvítí. Chceš-li rozsvítit světlo LED na prvním řádku, měl bys nastavit řádek 1 na log. 1 a sloupce (1, 2, 3, 4, 5, 6, 7, 8) na log. 0. Pak se všechny LED diody na prvním řádku rozsvítí.
+8×8 LED matice se skládá z 64 LED a každá LEDka je umístěna na průsečíku řádku a sloupce. Když je elektrická úroveň určitého řádku nízká a elektrická úroveň určitého sloupce vysoká, pak se odpovídající LED rozsvítí. Chceš-li rozsvítit první LED, nastav řádek 1 na nízkou úroveň (log. 0) a sloupec 1 na vysokou úroveň (log. 1). Pak se rozsvítí LED v prvním bodě. Chceš-li rozsvítit všechny LED v prvním řádku, nastav řádek 1 na log. 0 a sloupce 1 až 8 na log. 1. Pak se rozsvítí všechny LED v prvním řádku.
 
 ## Postup projektu
 
@@ -52,7 +52,7 @@ Princip 8x8 maticového LED displeje:
  *
  * Zapojení:
  *   Řádky matice: R1–10, R2–A1, R3–2, R4–13, R5–9, R6–3, R7–8, R8–5
- *   Sloupce přes odpor 220 Ω: C1–A0, C2–7, C3–6, C4–11, C5–4, C6–12, C7–A2, C8–A3
+ *   Sloupce přes rezistor 220 Ω: C1–A0, C2–7, C3–6, C4–11, C5–4, C6–12, C7–A2, C8–A3
  *   (čísla pinů matice viz tabulka v návodu)
  *
  * Knihovny: žádné (jen Arduino IDE)

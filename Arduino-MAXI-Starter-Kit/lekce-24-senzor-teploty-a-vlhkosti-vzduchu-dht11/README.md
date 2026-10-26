@@ -2,7 +2,7 @@
 
 ## Úvod
 
-DHT11 je jenzor, který obsahuje rezistivní čidlo vlhkosti, NTC teplotní senzor, a 8-bitovým převodník. Právě díky převodníku jsme schopni ze senzoru dostat hotová digitální data místo surového analogového výstupu, který jsme museli přepracovat např. v lekci 11. 
+DHT11 je senzor, který obsahuje rezistivní čidlo vlhkosti, NTC teplotní senzor a 8bitový převodník. Právě díky převodníku jsme schopni ze senzoru dostat hotová digitální data místo surového analogového výstupu, který jsme museli zpracovávat např. v lekci 11. 
 
 ## Komponenty
 
@@ -18,7 +18,7 @@ DHT11 je jenzor, který obsahuje rezistivní čidlo vlhkosti, NTC teplotní senz
 
 ## Princip
 
-Čidlo má pouze 3 piny: VCC, GND, a DATA. Komunikační proces začíná posláním startového signálu do DHT11, které pak přijímá signál a vrací odpověď. Hostitel poté začne přímat přijímat 40ti bitový balíček dat (16 bitů pro vlhkost (8 pro celá čísla a 8 pro desetinná) + 16 bitů pro teplotu (8 pro celá čísla a 8 pro desetinná) + 8 bitů pro kontrolu správnosti dat).
+Čidlo má pouze 3 piny: VCC, GND a DATA. Komunikace začíná posláním startovacího signálu do DHT11, který signál přijme a vrátí odpověď. Hostitel (Arduino) poté začne přijímat 40bitový balíček dat (16 bitů pro vlhkost (8 pro celá čísla a 8 pro desetinná) + 16 bitů pro teplotu (8 pro celá čísla a 8 pro desetinná) + 8 bitů pro kontrolu správnosti dat).
 
 ## Postup projektu
 
@@ -33,7 +33,7 @@ DHT11 je jenzor, který obsahuje rezistivní čidlo vlhkosti, NTC teplotní senz
 
 | DHT11 modul | Arduino |
 |---|---|
-| “-” | GND |
+| - | GND |
 | + | 5V |
 | S | 4 |
 

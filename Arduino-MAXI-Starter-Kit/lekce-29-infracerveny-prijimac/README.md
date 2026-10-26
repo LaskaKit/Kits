@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Hlavním prvkem tohoto infračerveného dálkového ovládání je přijímač HX1838. Tento infračervený přijímač umožňuje ve svém okolí detekovat signály z IR dálkových ovladačů a při jeho připojení k Arduino můžeme tyto signály převést na proměnné a dále využít. V našem Kitu se společně s přijímačem nachází dálkový ovladač, kterým můžeme přiřadit libovolné funkce v programu. Můžeš ale využít i jiné dálkové ovladače, které máš doma, třeba od televize či HIFI věže.
+Hlavním prvkem tohoto infračerveného dálkového ovládání je přijímač HX1838. Tento infračervený přijímač umožňuje ve svém okolí detekovat signály z IR dálkových ovladačů a po jeho připojení k Arduinu můžeme tyto signály převést na proměnné a dále využít. V naší stavebnici je společně s přijímačem i dálkový ovladač, jehož tlačítkům můžeš v programu přiřadit libovolné funkce. Můžeš ale využít i jiné dálkové ovladače, které máš doma, třeba od televize či hi-fi věže.
 
 <p align="center"><img src="img/obr-01.png" width="33%" alt=""></p>
 
@@ -15,13 +15,13 @@ Hlavním prvkem tohoto infračerveného dálkového ovládání je přijímač H
 - Breadboard vodiče
 ## Princip
 
-## Jako světelné zdroje se v dálkových ovladačích používají luminiscenční diody infra-LED, emitující paprsek záření o vlnové délce kolem 950nm. Jelikož při posílání informace způsobem log.1 = "infra-LED svítí", log.0 = "nesvítí" by bylo obtížné zajistit bezchybný přenos datového rámce z důvodu vysokého rušení (zdrojem takového infračerveného záření je i slunce či obyčejná žárovka). Využívá se tedy modulace.
+Jako světelné zdroje se v dálkových ovladačích používají luminiscenční diody infra-LED emitující paprsek záření o vlnové délce kolem 950 nm. Při posílání informace způsobem log. 1 = „infra-LED svítí“, log. 0 = „nesvítí“ by bylo kvůli vysokému rušení obtížné zajistit bezchybný přenos datového rámce (zdrojem infračerveného záření je i slunce či obyčejná žárovka). Využívá se proto modulace.
 
-Při modulaci logickou úrovní 1 se infra-LED budí obdélníkovým nosným signálem o dané střídě a frekvenci, typicky mezi 30-56kHz (38kHz v našem připadě). Tento stav se nazývá značka. Po dobu logické úrovně 0 není dioda aktivní, nastává mezera. Dobu trvání značky a mezery, stejně tak jako jejich význam, specifikuje použitý protokol. V klidu, tj. když neprobíhá přenos rámce, setrvává vysílač ve stavu log.0. Přijímač signálu je nastaven na použitý nosný kmitočet. Tím, že ostatní kmitočety odfiltruje, účinně zamezuje možnému rušení okolním světlem.
+Při modulaci logickou úrovní 1 se infra-LED budí obdélníkovým nosným signálem o dané střídě a frekvenci, typicky 30–56 kHz (v našem případě 38 kHz). Tento stav se nazývá značka. Po dobu logické úrovně 0 není dioda aktivní, nastává mezera. Dobu trvání značky a mezery, stejně tak jako jejich význam, specifikuje použitý protokol. V klidu, tj. když neprobíhá přenos rámce, setrvává vysílač ve stavu log. 0. Přijímač signálu je nastaven na použitý nosný kmitočet. Tím, že ostatní kmitočety odfiltruje, účinně zamezuje možnému rušení okolním světlem.
 
 <p align="center"><img src="img/obr-02.png" width="51%" alt=""></p>
 
-Když stiskneš klávesu Play / Pause, infračervené paprsky budou emitovány z dálkového ovladače a přijímány infračerveným přijímačem a LED na Arduino se rozsvítí.
+Když stiskneš klávesu Play/Pause, dálkový ovladač vyšle infračervené paprsky, přijímač je zachytí a LED na Arduinu se rozsvítí.
 
 ## Postup experimentu
 
@@ -30,12 +30,12 @@ Když stiskneš klávesu Play / Pause, infračervené paprsky budou emitovány z
 | IR přijímač | Arduino |
 |---|---|
 | S | 2 |
-| “-” | GND |
+| - | GND |
 | + | 5V |
 
 **Krok 2:** Napiš kód do Arduino IDE
 
-> **Poznámka:** Potřebuješ knihovnu IRremote verze 4 nebo novější (autor Armin Joachimsmeyer) – viz kapitola Knihovny. Starší programy s IRrecv a decode\_results s novou knihovnou nefungují.
+> **Poznámka:** Potřebuješ knihovnu IRremote verze 4 nebo novější (autor Armin Joachimsmeyer) – viz kapitola Instalace knihoven. Starší programy s IRrecv a decode\_results s novou knihovnou nefungují.
 
 **Kód** – soubor `Infracerveny_prijimac.ino`:
 
@@ -100,6 +100,6 @@ void loop() {
 
 **Krok 4:** Nahraj sketch do Arduina
 
-Nyní stiskni tlačítko „Play“ na dálkovém ovladači a LED, připojená k vývodu 13 na Arduino, se rozsvítí. Stiskni libovolnou jinou klávesu a LED zhasne.
+Nyní stiskni tlačítko „Play“ na dálkovém ovladači a LED připojená k pinu 13 Arduina se rozsvítí. Stiskni libovolnou jinou klávesu a LED zhasne.
 
 V sériovém monitoru (9600 baud) uvidíš kód každého stisknutého tlačítka. Kódy si můžeš zapsat a v programu jim přiřadit vlastní funkce.

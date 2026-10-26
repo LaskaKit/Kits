@@ -7,8 +7,8 @@
  *
  * Zapojení:
  *   Fotorezistor: jeden vývod na 5V, druhý na A0
- *   Odpor 10 kΩ: mezi A0 a GND
- *   8× LED přes odpor 220 Ω na piny 5 až 12, katody na GND
+ *   Rezistor 10 kΩ: mezi A0 a GND
+ *   8× LED přes rezistor 220 Ω na piny 5 až 12, katody na GND
  *
  * Knihovny: žádné (jen Arduino IDE)
  * Desky:    Arduino UNO R3, Arduino UNO R4 WiFi, Arduino Mega 2560

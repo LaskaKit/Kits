@@ -6,7 +6,7 @@
  *
  * Zapojení:
  *   Tlačítko: jeden vývod na 5V, druhý na pin 12
- *   Odpor 10 kΩ: mezi pin 12 a GND (drží vstup v klidu na LOW)
+ *   Rezistor 10 kΩ: mezi pin 12 a GND (drží vstup v klidu na LOW)
  *   LED: vestavěná LED „L“ na pinu 13 (nic nezapojuješ)
  *
  * Knihovny: žádné (jen Arduino IDE)

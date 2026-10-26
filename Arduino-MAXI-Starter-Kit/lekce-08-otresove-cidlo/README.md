@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Otřesová čidla jsou velmi principiálně velmi jednoduchá – Je-li spínač nakloněn v určitém úhlu, kulička uvnitř sjede dolů a dotkne se dvou kontaktů připojených k vnějším kolíčkům. Tím propojí kontakty. Pokud zůstane kulička mimo kontakty, rozpojí je.
+Otřesová čidla jsou principiálně velmi jednoduchá – je-li spínač nakloněn pod určitým úhlem, kulička uvnitř sjede dolů a dotkne se dvou kontaktů připojených k vnějším kolíčkům. Tím propojí kontakty. Pokud zůstane kulička mimo kontakty, rozpojí je.
 
 <p align="center"><img src="img/obr-01.jpg" width="55%" alt=""></p>
 
@@ -32,7 +32,7 @@ Schéma zapojení
  *
  * Když čidlem pohneš nebo ho nakloníš, kulička uvnitř spojí kontakty
  * a rozsvítí se LED na desce Arduino (pin 13).
- * Vstup používá vnitřní pull-up rezistor, žádný další rezistor není potřeba.
+ * Vstup používá interní pull-up rezistor, žádný další rezistor není potřeba.
  *
  * Zapojení:
  *   Otřesové čidlo: jeden vývod na pin 2, druhý na GND
@@ -50,7 +50,7 @@ const int cidloPin = 2;  // otřesové čidlo
 
 void setup() {
   pinMode(ledPin, OUTPUT);
-  pinMode(cidloPin, INPUT_PULLUP);  // zapnout vnitřní pull-up rezistor
+  pinMode(cidloPin, INPUT_PULLUP);  // zapnout interní pull-up rezistor
 }
 
 void loop() {
@@ -71,4 +71,4 @@ void loop() {
 
 **Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
-Pohni čidlem a LED připojená k pinu 13 na Arduinu se rozsvítí. Čidlo je připojené na vstup s vnitřním pull-up rezistorem, takže žádný další rezistor nepotřebuješ.
+Pohni čidlem a LED připojená k pinu 13 na Arduinu se rozsvítí. Čidlo je připojené na vstup s interním pull-up rezistorem, takže žádný další rezistor nepotřebuješ.

@@ -2,11 +2,11 @@
 
 ## Úvod
 
-Krokové motory, díky své jedinečné konstrukci, mohou být ovládány s vysokou přesností a bez jakýchkoli mechanismů zpětné vazby. Na hřídel krokového motoru je namontována série magnetů, řízena sérií elektromagnetických cívek, které jsou v určitém pořadí řízeny impulsy a dokáží se přesně otáčet dopředu a dozadu v pomalých „krocích“. Dokonce se dokáži otočit i o půl nebo čvtvrtkrok.
+Krokové motory, díky své jedinečné konstrukci, mohou být ovládány s vysokou přesností a bez jakýchkoli mechanismů zpětné vazby. Na hřídel krokového motoru je namontována série magnetů, řízena za pomoci elektromagnetických cívek, které budí elektrické impulzy. Díky tomuto mechanickému zpracování se krokové motory dokáží se přesně otáčet dopředu a dozadu v pomalých „krocích“. Dokonce se dokáži otočit i o půl nebo čvtvrtkrok.
 
-Existují dva typy krokových motorů – unipolar a bipolar. Je velmi důležité, abys věděl, s jakým typem pracuješ. V tomto experimentu použijeme krokový motor unipolar.
+Existují dva typy krokových motorů – unipolarní a bipolarní. Je velmi důležité, abys věděl, s jakým typem pracuješ. V tomto experimentu použijeme unipolarní krokový motor.
 
-Arduino desky nebo kontrolery nemohou přímo řídit krokové motory. Je tedy nezbytný řídící obvod, proto používáme řadič krokového motoru (jako je ukázáno na následujícím obrázku) k pohonu krokového motoru.
+Arduino desky nebo kontrolery nemohou přímo řídit krokové motory. Je tedy nezbytný řídící řadič krokového motoru (jako je ukázáno na následujícím obrázku).
 
 ## Komponenty
 
@@ -24,7 +24,7 @@ Arduino desky nebo kontrolery nemohou přímo řídit krokové motory. Je tedy n
 
 ## Princip
 
-Krokový motor je čtyřfázový a používá stejnosměrný napájecí zdroj. Po napájení všech fází motoru dle příslušného pořadí se začne otáčet krok za krokem. Schematický diagram čtyřfázového krokového motoru je znázorněn níže:
+Tento krokový motor je čtyřfázový a používá stejnosměrný napájecí zdroj. Po napájení všech fází motoru dle příslušného pořadí se začne otáčet krok za krokem. Schematický diagram čtyřfázového krokového motoru je znázorněn níže:
 
 <p align="center"><img src="img/obr-03.png" width="47%" alt=""></p>
 

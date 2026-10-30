@@ -25,9 +25,9 @@ Diodové sedmisegmentovky mají spotřebu cca 0,5 až 1 mA proudu na jeden segme
 
 ## Zapojení
 
-**Společná katoda (Common Cathode, CC)** – V displeji se společnou katodou jsou všechny katody LED segmentů spojeny dohromady na log. 0. Jednotlivé segmenty (a-g) jsou osvětleny tak, že anoda segmentu je zapojena na log. 1 přes omezovací rezistor.
+**Společná katoda (Common Cathode, CC)** – v displeji se společnou katodou jsou všechny katody LED segmentů spojeny dohromady na log. 0. Jednotlivé segmenty (a–g) se rozsvítí tak, že anoda segmentu je zapojena na log. 1 přes omezovací rezistor.
 
-**Společná anoda (Common Anode, CA)** – V displeji se společnou anodou jsou všechny anody LED segmentů spojeny dohromady na log. 1. Jednotlivé segmenty (a-g) jsou osvětleny tak, že katoda segmentu je zapojena na log. 0 přes omezovací rezistor.
+**Společná anoda (Common Anode, CA)** – v displeji se společnou anodou jsou všechny anody LED segmentů spojeny dohromady na log. 1. Jednotlivé segmenty (a–g) se rozsvítí tak, že katoda segmentu je zapojena na log. 0 přes omezovací rezistor.
 
 <p align="center"><img src="img/obr-02.jpg" width="37%" alt=""> <img src="img/obr-03.jpg" width="37%" alt=""></p>
 

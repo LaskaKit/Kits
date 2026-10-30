@@ -17,7 +17,7 @@ Hlavním prvkem tohoto infračerveného dálkového ovládání je přijímač H
 
 Jako světelné zdroje se v dálkových ovladačích používají luminiscenční diody infra-LED emitující paprsek záření o vlnové délce kolem 950 nm. Při posílání informace způsobem log. 1 = „infra-LED svítí“, log. 0 = „nesvítí“ by bylo kvůli vysokému rušení obtížné zajistit bezchybný přenos datového rámce (zdrojem infračerveného záření je i slunce či obyčejná žárovka). Využívá se proto modulace.
 
-Při modulaci logickou úrovní 1 se infra-LED budí obdélníkovým nosným signálem o dané střídě a frekvenci, typicky 30–56 kHz (v našem případě 38 kHz). Tento stav se nazývá značka. Po dobu logické úrovně 0 není dioda aktivní, nastává mezera. Dobu trvání značky a mezery, stejně tak jako jejich význam, specifikuje použitý protokol. V klidu, tj. když neprobíhá přenos rámce, setrvává vysílač ve stavu log. 0. Přijímač signálu je nastaven na použitý nosný kmitočet. Tím, že ostatní kmitočety odfiltruje, účinně zamezuje možnému rušení okolním světlem.
+Při modulaci logickou úrovní 1 se infra-LED budí obdélníkovým nosným signálem o dané střídě a frekvenci, typicky 30–56 kHz (v našem případě 38 kHz). Tento stav se nazývá značka. Po dobu logické úrovně 0 není dioda aktivní, nastává mezera. Dobu trvání značky a mezery, stejně jako jejich význam, specifikuje použitý protokol. V klidu, tj. když neprobíhá přenos rámce, setrvává vysílač ve stavu log. 0. Přijímač signálu je nastaven na použitý nosný kmitočet. Tím, že ostatní kmitočety odfiltruje, účinně zamezuje možnému rušení okolním světlem.
 
 <p align="center"><img src="img/obr-02.png" width="51%" alt=""></p>
 

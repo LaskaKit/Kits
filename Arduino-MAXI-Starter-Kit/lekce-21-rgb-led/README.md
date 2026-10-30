@@ -19,7 +19,7 @@ V tomto experimentu budeme používat technologii PWM pro ovládání jasu RGB L
 
 Každý ze tří kanálů má 256 stupňů jasu (0–255). Pokud jsou všechny tři základní barvy na 0, LED zhasne. Pokud jsou všechny 255, LED bude svítit nejjasnější možnou bílou. Různé barvy pak namícháme tak, že do kolíků pustíme hodnoty mezi 0 a 255.
 
-RGB LED lze rozdělit na následující typy: společná anoda a společná katoda. V tomto experimentu budeme používat RGB LED se společnou katodou.
+RGB LED se dělí na dva typy: se společnou anodou a se společnou katodou. V tomto experimentu budeme používat RGB LED se společnou katodou.
 
 ## Postup experimentu
 
@@ -101,4 +101,4 @@ void barva(int r, int g, int b) {
 
 **Krok 5:** Zkompiluj a nahraj sketch do Arduina (Ctrl+U)
 
-Nyní můžeš vidět, že RGB LED bliká červeně, zeleně, modře, oranžově, žlutě, fialově, indigo atd.
+Nyní můžeš vidět, že RGB LED bliká červeně, zeleně, modře, oranžově, žlutě, fialově a barvou indigo.

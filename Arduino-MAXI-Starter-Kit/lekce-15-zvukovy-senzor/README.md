@@ -4,9 +4,9 @@
 
 Mikrofon v nějaké formě pravděpodobně obsahuje i zařízení, na kterém tento návod čteš. Tento modul mikrofonu ovšem funguje trochu jinak. Má dva výstupy:
 
-A0: Analogový výstup, který se používá pro výstup napěťových signálů z mikrofonu v reálném čase. Analogický k funkci standardních mikrofonů.
+AO: Analogový výstup, který se používá pro výstup napěťových signálů z mikrofonu v reálném čase. Funguje stejně jako běžné mikrofony.
 
-D0: Dosáhne-li intenzita zvuku určité prahové hodnoty (nastavené pomocí potenciometru), objeví se na výstupu snímače vysoká nebo nízká úroveň.
+DO: Dosáhne-li intenzita zvuku určité prahové hodnoty (nastavené pomocí potenciometru), objeví se na výstupu snímače vysoká nebo nízká úroveň.
 
 <p align="center"><img src="img/obr-01.png" width="47%" alt=""></p>
 

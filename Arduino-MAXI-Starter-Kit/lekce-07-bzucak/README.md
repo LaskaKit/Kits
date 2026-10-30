@@ -14,7 +14,7 @@ Bzučáky jsou velmi jednoduché výstupní prvky, které ti umožňují přidat
 
 ## Princip
 
-Bzučáky můžeme rozdělit na aktivní nebo pasivní (viz následující obrázek). Otoč oba bzučáky kolíčky nahoru – ten se zelenou kulatou destičkou je pasivní, zatímco ten zalitý černým lepidlem (polymerem) je aktivní.
+Bzučáky můžeme rozdělit na aktivní a pasivní (viz následující obrázek). Otoč oba bzučáky kolíčky nahoru – ten se zelenou kulatou destičkou je pasivní, zatímco ten zalitý černým lepidlem (polymerem) je aktivní.
 
 <p align="center"><img src="img/obr-01.png" width="49%" alt=""></p>
 

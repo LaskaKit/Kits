@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Procesory obecně pracují na základě CPU času (program se vykonává podle taktu CPU), ne na základě reálného času (až na výjimky, jako je např. FreeRTOS). Mikrokontroléry, a dokonce ani PC nevědí, kolik je hodin nebo co je za den. Co když to ale potřebujeme vědět? Co když potřebujeme něco provést každý den v 7 ráno, ale nechceme, aby Arduino pořád běželo a počítalo mikrosekundy? Právě na to se hodí hodiny reálného času. 
+Procesory obecně pracují na základě CPU času (program se vykonává podle taktu CPU), ne na základě reálného času (až na výjimky, jako je např. FreeRTOS). Mikrokontroléry, a dokonce ani PC, nevědí, kolik je hodin nebo co je za den. Co když to ale potřebujeme vědět? Co když potřebujeme něco provést každý den v 7 ráno, ale nechceme, aby Arduino pořád běželo a počítalo mikrosekundy? Právě na to se hodí hodiny reálného času.
 
 Existuje mnoho populárních modulů hodin reálného času, jako jsou DS1302, DS1307, PCF8485 a další. My zde použijeme DS1302 od firmy Dallas Semiconductor.
 
@@ -19,9 +19,9 @@ Existuje mnoho populárních modulů hodin reálného času, jako jsou DS1302, D
 
 ## Princip
 
-DS1302 obsahuje hodiny reálného času, kalendář a 31 B statickou paměť RAM. Zařízení komunikuje s mikroprocesorem přes jednoduché sériové rozhraní. Hodiny reálného času poskytují sekundy, minuty, hodiny, den v týdnu, den v měsíci, měsíc a rok. Konec měsíce je automaticky přizpůsobován u měsíců s méně než 31 dny, včetně korekce u přestupného roku. Hodiny pracují ve 24hodinovém nebo 12hodinovém režimu s indikátorem AM (dopoledne) / PM (odpoledne).
+DS1302 obsahuje hodiny reálného času, kalendář a statickou paměť RAM o velikosti 31 B. Zařízení komunikuje s mikroprocesorem přes jednoduché sériové rozhraní. Hodiny reálného času poskytují sekundy, minuty, hodiny, den v týdnu, den v měsíci, měsíc a rok. Konec měsíce je automaticky přizpůsobován u měsíců s méně než 31 dny, včetně korekce u přestupného roku. Hodiny pracují ve 24hodinovém nebo 12hodinovém režimu s indikátorem AM (dopoledne) / PM (odpoledne).
 
-Propojení DS1302 s mikroprocesorem je zjednodušeno užitím synchronního sériového přenosu. Pro komunikaci s hodinami/pamětí jsou použity pouze tři vodiče: CE, I/O (data) a SCLK (časovač). Data mohou být přenesena z/do hodin nebo paměti buď po jednom bajtu, nebo až po 31 bajtech v režimu burst. DS1302 je navržen pro velmi malou spotřebu a udržení dat při příkonu menším než 1 μW.
+Propojení DS1302 s mikroprocesorem je zjednodušeno užitím synchronního sériového přenosu. Pro komunikaci s hodinami/pamětí jsou použity pouze tři vodiče: CE, I/O (data) a SCLK (hodinový signál). Data mohou být přenesena z/do hodin nebo paměti buď po jednom bajtu, nebo až po 31 bajtech v režimu burst. DS1302 je navržen pro velmi malou spotřebu a udržení dat při příkonu menším než 1 μW.
 
 ## Postup projektu
 

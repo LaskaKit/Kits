@@ -102,7 +102,7 @@ void bezText(const char *text, int radek) {
 ```
 <!-- /kod -->
 
-**Krok 3:** Nainstaluj knihovnu LiquidCrystal I²C (autor Frank de Brabander) přes Správce knihoven – postup najdeš v kapitole Instalace knihoven na začátku návodu.
+**Krok 3:** Nainstaluj knihovnu LiquidCrystal I2C (autor Frank de Brabander) přes Správce knihoven – postup najdeš v kapitole Instalace knihoven na začátku návodu.
 
 **Krok 4:** Připoj desku k počítači
 
@@ -112,6 +112,6 @@ void bezText(const char *text, int radek) {
 
 Nyní uvidíš na displeji „Laskarduino“ a „Zdravim bastlire!“.
 
-**Pokud na displeji nic nevidíš, zkontroluj nastavení odporového trimru pro řízení kontrastu na převodníku. Může se stát, že je nastavený na minimum a tudíž na displeji není nic vidět.** Otáčením si nastav správný kontrast tak, aby byl nápis na displeji co nejlépe čitelný.
+**Pokud na displeji nic nevidíš, zkontroluj nastavení odporového trimru pro řízení kontrastu na převodníku. Může se stát, že je nastavený na minimum, a tudíž na displeji není nic vidět.** Otáčením si nastav správný kontrast tak, aby byl nápis na displeji co nejlépe čitelný.
 
 <p align="center"><img src="img/obr-03.jpg" width="42%" alt=""></p>

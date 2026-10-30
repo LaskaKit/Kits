@@ -21,7 +21,7 @@ Pulzně šířková modulace neboli PWM (Pulse Width Modulation) je diskrétní 
 
 <p align="center"><img src="img/obr-02.png" width="61%" alt=""></p>
 
-Přenosový signál, který nese informaci o přenášené hodnotě, může nabývat hodnot zapnuto/vypnuto tj. log. 1 / log. 0 (v našem případě 5 V a 0 V). Hodnota přenášeného signálu je v přenosu "zakódována" jako poměr mezi stavy zapnuto/vypnuto. Tomuto poměru se říká střída. Cyklu, kdy dojde k přenosu jedné střídy, se říká perioda. Omezením pro PWM je to, že přenos informace je vždy omezen na relativní vyjádření, a to 0–100 %. To znamená, že musí být znám poměr mezi skutečnou hodnotou a procentuálním vyjádřením. Časové hodnoty střídy se pohybují v sekundách nebo v milisekundách pro přesnější řízení. Perioda je vždy součtem doby zapnuto a vypnuto.
+Přenosový signál, který nese informaci o přenášené hodnotě, může nabývat hodnot zapnuto/vypnuto, tj. log. 1 / log. 0 (v našem případě 5 V a 0 V). Hodnota přenášeného signálu je v přenosu "zakódována" jako poměr mezi stavy zapnuto/vypnuto. Tomuto poměru se říká střída. Cyklu, kdy dojde k přenosu jedné střídy, se říká perioda. Omezením pro PWM je to, že přenos informace je vždy omezen na relativní vyjádření, a to 0–100 %. To znamená, že musí být znám poměr mezi skutečnou hodnotou a procentuálním vyjádřením. Časové hodnoty střídy se pohybují v sekundách nebo v milisekundách pro přesnější řízení. Perioda je vždy součtem doby zapnuto a vypnuto.
 
 Periodu je potřeba opakovat dostatečně rychle, aby nebylo vidět, že LEDka bliká, a vypadalo to, že svítí trvale.
 

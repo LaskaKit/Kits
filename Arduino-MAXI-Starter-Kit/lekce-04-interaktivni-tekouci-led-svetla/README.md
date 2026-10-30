@@ -15,7 +15,7 @@ Minulá lekce ukázala, jak se dělají tekoucí LED světla. V této lekci při
 - Breadboard vodiče
 ## Princip
 
-Princip je poměrně jednoduchý. Postupně se zapne 8 LEDek. Potenciometrem se pak mění časový interval zapnutí a vypnutí LED pomocí nastavení potenciometru.
+Princip je poměrně jednoduchý. Postupně se zapne 8 LEDek. Potenciometrem se pak mění časový interval zapnutí a vypnutí LED.
 
 ## Postup experimentu
 

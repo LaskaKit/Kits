@@ -8,7 +8,7 @@ Dozvěděli jsme se od našeho zákazníka, že existují převodníky, které m
 
 - Arduino
 - USB kabel
-- I²C zařízení (I2C LCD displej nebo Hodiny reálného času)
+- I²C zařízení (I2C LCD displej nebo hodiny reálného času)
 - Breadboard vodiče
 ## Princip
 

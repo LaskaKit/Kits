@@ -32,13 +32,13 @@ Q0–Q7: osm výstupů, které dokážou řídit 8 LED nebo 8 pinů sedmisegment
 
 Q7S: Serial data output pin, který slouží k propojení s dalším obvodem 74HC595
 
-MR: Reset pin, aktivní na log.0; zapojíme ho na +5V
+MR: Reset pin, aktivní na log. 0; zapojíme ho na +5V
 
 SH: Shift register clock input je určen pro hodinový signál
 
 ST: Storage register clock input, na náběžné hraně přesune údaje z posuvného registru do paměťového
 
-OE: Output enable pin, aktivní na log.0; zapojíme ho na GND
+OE: Output enable pin, aktivní na log. 0; zapojíme ho na GND
 
 Ds: Serial data input pin, sem se zapisují data
 

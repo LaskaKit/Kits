@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Ve vědomostních soutěžích, především těch zábavních (např. soutěže v odpovídání na otázky), organizátoři často používají bzučákový systém k přesnému a spravedlivému určení pořadí odpovídajících hráčů. Takový systém dokáže objektivně zajistit přesnost a spravedlnost soutěže, čímž dělá pořad zábavnější. V této lekci budeme používat tlačítka, bzučáky a LED a vytvoříme kvízový bzučák.
+Ve vědomostních soutěžích organizátoři často používají bzučákový systém k přesnému a spravedlivému určení pořadí odpovídajících hráčů. Takový systém dokáže objektivně zajistit přesnost a spravedlnost soutěže. V této lekci sestavíme kvízový bzučák z tlačítka, bzučáky a LED.
 
 ## Komponenty
 
@@ -14,6 +14,7 @@ Ve vědomostních soutěžích, především těch zábavních (např. soutěže
 - Aktivní bzučák
 - Breadboard vodiče
 - Breadboard
+
 ## Princip
 
 Tlačítka 1, 2 a 3 slouží k odpovídání a tlačítkem 4 se resetuje. Pokud se nejprve zmáčkne tlačítko 1, bzučák pípne, odpovídající LED se rozsvítí a všechny další LED zhasnou. Chceme-li začít další kolo, jednoduše zmáčkneme tlačítko 4.

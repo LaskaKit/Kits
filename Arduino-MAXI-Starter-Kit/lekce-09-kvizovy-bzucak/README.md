@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Ve vědomostních soutěžích organizátoři často používají bzučákový systém k přesnému a spravedlivému určení pořadí odpovídajících hráčů. Takový systém dokáže objektivně zajistit přesnost a spravedlnost soutěže. V této lekci sestavíme kvízový bzučák z tlačítka, bzučáků a LED.
+Ve vědomostních soutěžích organizátoři často používají bzučákový systém k přesnému a spravedlivému určení pořadí odpovídajících hráčů. Takový systém dokáže objektivně zajistit přesnost a spravedlnost soutěže. V této lekci sestavíme kvízový bzučák z tlačítek, bzučáků a LEDek.
 
 ## Komponenty
 

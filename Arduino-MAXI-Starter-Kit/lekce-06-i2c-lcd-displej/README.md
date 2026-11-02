@@ -2,7 +2,7 @@
 
 ## Úvod
 
-Jak jistě víš, LCD a další obrazovky výrazně zjednodušují naši interakci s přístroji, avšak mají i jednu nevýhodu. Jeden poměrně malý LCD displej vyžaduje mnoho pinů na mikrokontroléru, což výrazně limituje počet ostatních zařízení. která lze ve stejnou dobu k displeji připojit. A právě z těchto důvodů byl vyvinut převodník s I²C sběrnicí pro LCD displeje 1602 a 2004, který tento problém řeší.
+Jak jistě víš, LCD a další obrazovky výrazně zjednodušují naši interakci s přístroji, avšak mají i jednu nevýhodu. Jeden poměrně malý LCD displej vyžaduje mnoho pinů na mikrokontroléru, což výrazně limituje počet ostatních zařízení, která lze ve stejnou dobu k mikrokontroléru připojit. A právě z těchto důvodů byl vyvinut převodník s I²C sběrnicí pro LCD displeje 1602 a 2004, který tento problém řeší.
 
 Modrý potenciometr (trimr) na převodníku se používá k nastavení kontrastu. 
 

@@ -2,14 +2,14 @@
 
 ## Úvod
 
-Jak jistě víš, LCD a další obrazovky výrazně obohacují naši interakci s přístroji, avšak mají i jednu nevýhodu. Pokud jsou připojeny ke kontroleru, bude obsazeno několik IO portů, kterých je omezený počet. A právě z těchto důvodů byl vyvinut převodník s I²C sběrnicí pro LCD displeje 1602 a 2004, který daný problém řeší.
+Jak jistě víš, LCD a další obrazovky výrazně zjednodušují naši interakci s přístroji, avšak mají i jednu nevýhodu. Jeden poměrně malý LCD displej vyžaduje mnoho pinů na mikrokontroléru, což výrazně limituje počet ostatních zařízení. která lze ve stejnou dobu k displeji připojit. A právě z těchto důvodů byl vyvinut převodník s I²C sběrnicí pro LCD displeje 1602 a 2004, který tento problém řeší.
 
 Modrý potenciometr (trimr) na převodníku se používá k nastavení kontrastu. 
 
+<p align="center"><img src="img/obr-01.png" width="100%" alt=""></p>
+
 ## Co je to I²C?
 I²C (anglicky Inter-Integrated Circuit, čteme anglicky I-squared-C nebo česky I-dva-C) je multi-masterová počítačová sériová sběrnice původně vyvinutá firmou Philips (dnes NXP Semiconductors), která je používána k připojování nízkorychlostních periferií k základním deskám, mikrokontrolérům atp. Prakticky identická sběrnice se skrývá pod zkratkou TWI (Two Wire Interface – dvoudrátové rozhraní), kterou používají firma Atmel a další výrobci, namísto chráněné značky I²C. I²C používá pouze dva obousměrné kanály – datový kanál SDA a hodinový signál SCL s pull-up rezistory. Typicky se používá napětí +5 V nebo +3,3 V, povoleny jsou však i systémy s jiným napětím.
-
-<p align="center"><img src="img/obr-01.png" width="100%" alt=""></p>
 
 ## Komponenty
 
@@ -20,7 +20,7 @@ I²C (anglicky Inter-Integrated Circuit, čteme anglicky I-squared-C nebo česky
 
 ## Princip
 
-V tomto pokusu necháme I²C LCD1602 displej zobrazit „Laskarduino“ a „Zdravim bastlire!“ pomocí programování.
+V tomto pokusu necháme I²C LCD1602 displej zobrazit „Laskarduino“ a „Zdravim bastlire!“ pomocí jednoduchého kódu.
 
 ## Postup experimentu
 
